@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 import { Loader2, Lock, AlertCircle } from 'lucide-react';
@@ -11,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 export default function AdminLoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleGoogleLogin = async () => {
     setIsLoading(true);
@@ -21,7 +23,12 @@ export default function AdminLoginPage() {
         redirect: false
       });
       if (result?.error) {
-        setError('로그인 중 오류가 발생했습니다.');
+        setError('로그인 중 오류가 발생했습니다. 권한이 없는 계정일 수 있습니다.');
+        setIsLoading(false);
+      } else if (result?.ok) {
+        // Success: Redirect to the callback URL manually
+        router.push(result.url || '/admin_board');
+      } else {
         setIsLoading(false);
       }
     } catch (err) {
