@@ -31,7 +31,7 @@ const philosophyItems = [
 
 export default async function DevPage() {
   const portfolios = await portfolioService
-    .getByCategories(['dev_website', 'dev_software'])
+    .getByCategories(['dev'])
     .catch(() => []);
 
   return (

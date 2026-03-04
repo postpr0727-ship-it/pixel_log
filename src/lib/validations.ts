@@ -32,13 +32,10 @@ export type ContactFormSchema = z.infer<typeof contactFormSchema>;
 export const portfolioFormSchema = z.object({
   title: z.string().min(2, '제목은 2자 이상 입력해주세요.').max(100, '제목은 100자 이하로 입력해주세요.'),
   category: z.enum([
-    'design_branding',
-    'design_web',
-    'design_print',
+    'design',
     'blog_marketing',
     'online_ad',
-    'dev_website',
-    'dev_software',
+    'dev',
     'video'
   ], { message: '카테고리를 선택해주세요.' }),
   thumbnail_url: z.string().url('올바른 URL을 입력해주세요.').optional().or(z.literal('')),
@@ -103,13 +100,10 @@ export const serviceTypeLabels: Record<string, string> = {
 
 // Portfolio category labels for display
 export const portfolioCategoryLabels: Record<string, string> = {
-  design_branding: '브랜드 디자인',
-  design_web: '웹 디자인',
-  design_print: '인쇄 디자인',
+  design: '디자인',
   blog_marketing: '블로그 마케팅',
   online_ad: '온라인 광고',
-  dev_website: '홈페이지 개발',
-  dev_software: '프로그램 개발',
+  dev: '개발',
   video: '영상 제작'
 };
 

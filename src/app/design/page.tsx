@@ -32,7 +32,7 @@ const philosophyItems = [
 
 export default async function DesignPage() {
   const portfolios = await portfolioService
-    .getByCategories(['design_branding', 'design_web', 'design_print'])
+    .getByCategories(['design'])
     .catch(() => []);
 
   return (

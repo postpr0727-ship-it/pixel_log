@@ -26,10 +26,10 @@ const tabs: { label: string; value: TabValue }[] = [
 
 const categoryMap: Record<TabValue, PortfolioCategory[]> = {
   all: [],
-  design: ['design_branding', 'design_web', 'design_print'],
+  design: ['design'],
   blog: ['blog_marketing'],
   online_ad: ['online_ad'],
-  dev: ['dev_website', 'dev_software'],
+  dev: ['dev'],
   video: ['video'],
 };
 

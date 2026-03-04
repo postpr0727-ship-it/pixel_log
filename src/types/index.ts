@@ -1,12 +1,9 @@
 // Portfolio Category Types
 export type PortfolioCategory =
-  | 'design_branding'
-  | 'design_web'
-  | 'design_print'
+  | 'design'
   | 'blog_marketing'
   | 'online_ad'
-  | 'dev_website'
-  | 'dev_software'
+  | 'dev'
   | 'video';
 
 // Service Type for consultation form

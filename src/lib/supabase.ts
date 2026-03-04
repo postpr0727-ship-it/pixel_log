@@ -128,7 +128,7 @@ export const portfolioService = {
 
     switch (mainCategory) {
       case 'design':
-        categories = ['design_branding', 'design_web', 'design_print'];
+        categories = ['design'];
         break;
       case 'blog':
         categories = ['blog_marketing'];
@@ -137,7 +137,7 @@ export const portfolioService = {
         categories = ['online_ad'];
         break;
       case 'dev':
-        categories = ['dev_website', 'dev_software'];
+        categories = ['dev'];
         break;
     }
 
