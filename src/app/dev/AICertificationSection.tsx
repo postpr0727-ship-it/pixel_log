@@ -12,11 +12,11 @@ export function AICertificationSection() {
                     src="/images/ai-pdtq-cert.png"
                     alt="AI-PDTQ Certificate Background"
                     fill
-                    className="object-cover object-center opacity-40 mix-blend-overlay"
+                    className="object-cover object-center opacity-70"
                     quality={90}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/70 to-navy/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
