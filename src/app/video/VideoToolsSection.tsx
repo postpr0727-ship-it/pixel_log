@@ -14,7 +14,7 @@ const tools = [
         name: 'CapCut',
         description: '트렌디한 숏폼 콘텐츠와 빠른 템플릿 기반의 감각적인 영상 편집을 위해 활용합니다.',
         color: '#000000',
-        image: '/images/capcut-logo.png'
+        image: '/images/capcut-logo.svg'
     }
 ];
 
