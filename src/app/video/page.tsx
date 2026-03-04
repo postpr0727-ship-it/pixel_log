@@ -3,6 +3,7 @@ import { AlertCircle } from 'lucide-react';
 import { PageHero } from '@/components/hero';
 import { PhilosophySection } from '@/components/sections';
 import { PortfolioGrid } from '@/components/portfolio';
+import { VideoToolsSection } from './VideoToolsSection';
 import { portfolioService } from '@/lib/supabase';
 
 export const metadata: Metadata = {
@@ -80,6 +81,7 @@ export default async function VideoPage() {
         </div>
       </section>
 
+      <VideoToolsSection />
       <PortfolioGrid portfolios={portfolios} />
     </>
   );

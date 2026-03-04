@@ -52,8 +52,8 @@ export function AboutContent() {
             </h2>
             <div className="space-y-6 text-navy/70 leading-relaxed font-bold italic text-lg">
               <p>
-                PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.
-                디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아,
+                PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.<br className="hidden lg:block" />
+                디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아,<br className="hidden lg:block" />
                 클라이언트의 비즈니스 스토리를 기록합니다.
               </p>
               <p>
@@ -111,7 +111,7 @@ export function AboutContent() {
                 <value.icon className="h-10 w-10 text-navy" />
               </div>
               <h3 className="text-2xl font-black text-navy mb-4 italic uppercase tracking-tight">{value.title}</h3>
-              <p className="text-navy/60 text-base leading-relaxed font-bold italic">
+              <p className="text-navy/60 text-base leading-relaxed font-bold italic break-keep">
                 {value.description}
               </p>
             </motion.div>

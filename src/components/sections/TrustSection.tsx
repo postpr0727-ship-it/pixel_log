@@ -120,7 +120,7 @@ function ProjectCard({ project, index, isFeatured }: { project: Project; index: 
                         }`}>
                         {project.title}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed line-clamp-2 max-h-0 overflow-hidden transition-all duration-500 ease-out group-hover:max-h-12 group-hover:mt-2 group-hover:text-white/80">
+                    <p className="text-white/60 text-sm leading-relaxed line-clamp-2 max-h-0 overflow-hidden transition-all duration-500 ease-out group-hover:max-h-12 group-hover:mt-2 group-hover:text-white/80 break-keep">
                         {project.description}
                     </p>
                 </div>

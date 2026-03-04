@@ -153,7 +153,7 @@ function BentoCard({ service, index }: { service: typeof services[0]; index: num
               }`}>
               {service.title}
             </h3>
-            <p className={`text-sm lg:text-base leading-relaxed mb-6 line-clamp-3 ${isImageCard ? 'text-white/80' : 'text-muted-foreground'
+            <p className={`text-sm lg:text-base leading-relaxed mb-6 line-clamp-3 break-keep ${isImageCard ? 'text-white/80' : 'text-muted-foreground'
               }`}>
               {service.description}
             </p>
