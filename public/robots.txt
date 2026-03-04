@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin pages
+Disallow: /admin_board
+Disallow: /admin_login87865678798
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://pixel-log.com/sitemap.xml

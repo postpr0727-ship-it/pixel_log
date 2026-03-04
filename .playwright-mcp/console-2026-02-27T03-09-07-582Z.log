@@ -1,0 +1,3567 @@
+[     506ms] [WARNING] Image with src "/images/service-design.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[     515ms] [WARNING] Image with src "/images/service-ad.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[     518ms] [WARNING] Image with src "/images/service-dev.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[     522ms] [WARNING] Image with src "/images/service-video.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[     582ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  122894ms] [WARNING] Image with src "/images/service-design.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  122902ms] [WARNING] Image with src "/images/service-ad.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  122907ms] [WARNING] Image with src "/images/service-dev.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  122910ms] [WARNING] Image with src "/images/service-video.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  123715ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[  246875ms] [WARNING] Image with src "/images/naver-blog-award-2024.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 1656044ms] [WARNING] Image with src "/images/service-design.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 1709453ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709515ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709574ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709635ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709696ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709757ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709818ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709878ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1709939ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710002ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710062ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710124ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710186ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710246ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710307ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710367ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710429ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710491ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710551ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710612ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710674ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710736ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710796ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710857ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710918ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1710979ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711039ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711100ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711161ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711222ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711282ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711344ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711406ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711468ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711529ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711589ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711651ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711713ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711774ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711835ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711897ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1711960ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712018ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712080ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712140ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712201ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712262ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712324ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712384ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712445ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712506ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712566ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712626ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712687ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712747ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712810ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712869ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712930ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1712990ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713050ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713111ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713174ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713236ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713297ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713360ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713419ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713481ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713544ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713606ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713666ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713728ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713789ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713851ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713911ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1713973ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714033ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714094ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714156ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714217ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714279ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714341ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714403ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714465ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714526ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714586ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714647ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714709ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714769ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714831ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714893ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1714953ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715014ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715076ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715138ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715199ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715261ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715322ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715382ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715443ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715504ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715566ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715627ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715688ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715749ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715811ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715873ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715934ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1715995ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716056ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716117ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716177ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716238ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716302ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716363ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716424ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716486ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716546ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716610ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716669ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716732ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716794ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716854ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716917ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1716979ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717039ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717099ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717160ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717221ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717283ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717344ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717404ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717466ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717527ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717589ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717650ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717711ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717773ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717834ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717894ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1717955ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718015ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718076ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718139ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718199ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718260ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718323ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718383ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718446ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718506ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718568ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718628ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718688ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718750ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718810ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718871ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718932ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1718995ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719055ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719116ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719177ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719237ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719300ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719360ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719422ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719485ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719546ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719609ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719668ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719730ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719790ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719851ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719913ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1719973ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720032ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720094ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720156ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720217ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720277ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720339ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720400ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720460ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720521ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720583ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720644ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720706ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720767ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720829ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720889ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1720951ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721027ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721089ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721151ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721213ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721276ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721337ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721399ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721459ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721519ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721581ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721643ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721704ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721765ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721829ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721889ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1721951ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722014ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722076ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722137ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722199ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722260ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722321ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722382ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722444ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722504ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722688ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722749ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722810ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722872ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722934ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1722996ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1723057ms] [ERROR] ./src/components/sections/StatsSection.tsx:315:10
+Ecmascript file had an error
+  313 |
+  314 | // Simple bar counter (relies on parent inView)
+> 315 | function BarCounter({ to, delay, inView }: { to: number; delay: number; inView: boolean }) {
+      |          ^^^^^^^^^^
+  316 |   const nodeRef = useRef<HTMLSpanElement>(null);
+  317 |
+  318 |   useEffect(() => {
+
+the name `BarCounter` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/components/sections/StatsSection.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 2381258ms] [WARNING] Image with src "/images/service-design.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2381266ms] [WARNING] Image with src "/images/service-ad.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2381269ms] [WARNING] Image with src "/images/service-dev.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2381273ms] [WARNING] Image with src "/images/service-video.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2381333ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
