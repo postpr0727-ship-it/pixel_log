@@ -14,7 +14,7 @@ const tools = [
         name: 'CapCut',
         description: '트렌디한 숏폼 콘텐츠와 빠른 템플릿 기반의 감각적인 영상 편집을 위해 활용합니다.',
         color: '#000000',
-        image: '/images/capcut-logo.svg'
+        image: '/images/capcut-logo-new.png'
     }
 ];
 
@@ -52,13 +52,13 @@ export function VideoToolsSection() {
                             <div className="relative z-10 bg-white/5 border border-white/10 rounded-[2.5rem] p-8 lg:p-12 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 overflow-hidden h-full">
                                 {/* Tool Icon Container */}
                                 <div className="flex flex-col items-center text-center">
-                                    <div className={`${tool.name === 'CapCut' ? 'w-48' : 'w-24'} h-24 mb-10 relative`}>
+                                    <div className="w-24 h-24 mb-10 relative">
                                         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500" />
                                         <div className="relative w-full h-full flex items-center justify-center p-2">
                                             <Image
                                                 src={tool.image}
                                                 alt={tool.name}
-                                                width={tool.name === 'CapCut' ? 192 : 96}
+                                                width={96}
                                                 height={96}
                                                 className="object-contain"
                                             />
