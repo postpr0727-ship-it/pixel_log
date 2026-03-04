@@ -51,6 +51,9 @@ import { portfolioCategoryLabels } from '@/lib/validations';
 
 const categories = Object.entries(portfolioCategoryLabels);
 
+// 링크만 입력하면 되는 카테고리 (블로그마케팅, 영상제작)
+const LINK_ONLY_CATEGORIES = ['blog_marketing', 'video'];
+
 export default function PortfoliosPage() {
   return (
     <Suspense fallback={<div className="p-8 text-center text-muted-foreground">로딩 중...</div>}>
@@ -87,24 +90,41 @@ function PortfoliosContent() {
   const [newImageUrl, setNewImageUrl] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
   const [uploading, setUploading] = useState<'thumbnail' | 'image' | null>(null);
+  const [isFetchingMeta, setIsFetchingMeta] = useState(false);
+  const [metaFetchStatus, setMetaFetchStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const thumbnailFileRef = useRef<HTMLInputElement>(null);
   const imageFileRef = useRef<HTMLInputElement>(null);
 
-  // YouTube link → auto thumbnail
-  useEffect(() => {
-    if (!formData.link_url) return;
-    const ytMatch = formData.link_url.match(
-      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/
-    );
-    if (ytMatch) {
-      const videoId = ytMatch[1];
-      const autoThumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-      if (!formData.thumbnail_url) {
-        setFormData((prev) => ({ ...prev, thumbnail_url: autoThumb }));
-      }
+  const isLinkOnlyCategory = LINK_ONLY_CATEGORIES.includes(formData.category);
+
+  const handleFetchMeta = async () => {
+    const url = formData.link_url.trim();
+    if (!url) {
+      setFormError('링크 URL을 먼저 입력해주세요.');
+      return;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [formData.link_url]);
+    setIsFetchingMeta(true);
+    setMetaFetchStatus('idle');
+    try {
+      const res = await fetch('/api/og-metadata', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url }),
+      });
+      if (!res.ok) throw new Error();
+      const { data } = await res.json();
+      setFormData((prev) => ({
+        ...prev,
+        title: data.title || prev.title,
+        thumbnail_url: data.thumbnail_url || prev.thumbnail_url,
+      }));
+      setMetaFetchStatus('success');
+    } catch {
+      setMetaFetchStatus('error');
+    } finally {
+      setIsFetchingMeta(false);
+    }
+  };
 
   const uploadFile = async (file: File): Promise<string> => {
     const fd = new FormData();
@@ -226,11 +246,23 @@ function PortfoliosContent() {
     }
     setNewImageUrl('');
     setFormError(null);
+    setMetaFetchStatus('idle');
     setIsFormOpen(true);
   };
 
   const handleSubmit = async () => {
     setFormError(null);
+
+    // 링크 전용 카테고리 클라이언트 검증
+    if (isLinkOnlyCategory && !formData.link_url.trim()) {
+      setFormError('링크 URL을 입력해주세요.');
+      return;
+    }
+    if (!formData.title.trim()) {
+      setFormError('제목을 입력해주세요. (링크 입력 후 "정보 가져오기" 버튼을 누르거나 직접 입력)');
+      return;
+    }
+
     try {
       const url = editingPortfolio
         ? `/api/portfolios/${editingPortfolio.id}`
@@ -289,6 +321,101 @@ function PortfoliosContent() {
       console.error('Failed to toggle publish:', error);
     }
   };
+
+  // 공통 필드 (카테고리 + 클라이언트)
+  const CategoryClientFields = () => (
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <Label>카테고리 *</Label>
+        <Select
+          value={formData.category}
+          onValueChange={(value) => {
+            setFormData({ ...formData, category: value as PortfolioCategory });
+            setMetaFetchStatus('idle');
+          }}
+        >
+          <SelectTrigger className="mt-1">
+            <SelectValue placeholder="카테고리 선택" />
+          </SelectTrigger>
+          <SelectContent>
+            {categories.map(([value, label]) => (
+              <SelectItem key={value} value={value}>
+                {label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+      <div>
+        <Label>클라이언트</Label>
+        <Input
+          value={formData.client_name}
+          onChange={(e) => setFormData({ ...formData, client_name: e.target.value })}
+          placeholder="클라이언트명"
+          className="mt-1"
+        />
+      </div>
+    </div>
+  );
+
+  // 공통 필드 (소속)
+  const AffiliationField = () => (
+    <div>
+      <Label>소속 / 작업 당시 직장</Label>
+      <Input
+        value={formData.affiliation}
+        onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
+        placeholder="예: PIXEL-LOG  또는  이전 직장명"
+        className="mt-1"
+      />
+      <div className="mt-2 rounded-lg border border-navy/10 bg-navy/[0.03] px-3 py-2 text-xs text-muted-foreground space-y-1">
+        <p className="font-semibold text-navy/70">소속 입력 규칙</p>
+        <p>• <span className="font-mono font-bold text-navy">PIXEL-LOG</span> 입력 시 → &quot;PIXEL-LOG 작업&quot; 섹션으로 분류</p>
+        <p>• 이전 직장명 입력 시 → &quot;이전 직장 작업&quot; 섹션으로 분류 (회사명별로 그룹화)</p>
+        <p>• 비워두면 → 구분 없이 표시</p>
+      </div>
+    </div>
+  );
+
+  // 공통 필드 (날짜 + 순서 + 공개)
+  const BottomFields = () => (
+    <>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <Label>프로젝트 날짜</Label>
+          <Input
+            type="month"
+            value={formData.project_date}
+            onChange={(e) => setFormData({ ...formData, project_date: e.target.value })}
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <Label>정렬 순서</Label>
+          <Input
+            type="number"
+            value={formData.display_order}
+            onChange={(e) =>
+              setFormData({ ...formData, display_order: parseInt(e.target.value) || 0 })
+            }
+            className="mt-1"
+          />
+        </div>
+      </div>
+      <div className="flex items-center gap-3 pt-1">
+        <Switch
+          checked={formData.is_published}
+          onCheckedChange={(checked) => setFormData({ ...formData, is_published: checked })}
+        />
+        <div>
+          <Label className="cursor-pointer">공개 여부</Label>
+          <p className="text-xs text-muted-foreground">
+            {formData.is_published ? '홈페이지에 공개됩니다.' : '비공개 상태입니다.'}
+          </p>
+        </div>
+      </div>
+    </>
+  );
 
   return (
     <div className="p-6 lg:p-8">
@@ -428,8 +555,8 @@ function PortfoliosContent() {
               {editingPortfolio ? '포트폴리오 수정' : '새 포트폴리오'}
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-5 py-4">
 
+          <div className="space-y-5 py-4">
             {/* 에러 메시지 */}
             {formError && (
               <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -437,288 +564,271 @@ function PortfoliosContent() {
               </div>
             )}
 
-            {/* 제목 */}
-            <div>
-              <Label>제목 *</Label>
-              <Input
-                value={formData.title}
-                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                placeholder="포트폴리오 제목"
-                className="mt-1"
-              />
-            </div>
+            {isLinkOnlyCategory ? (
+              /* ===== 링크 전용 폼 (블로그마케팅, 영상제작) ===== */
+              <>
+                {/* 카테고리 + 클라이언트 */}
+                <CategoryClientFields />
 
-            {/* 카테고리 + 클라이언트 */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label>카테고리 *</Label>
-                <Select
-                  value={formData.category}
-                  onValueChange={(value) =>
-                    setFormData({ ...formData, category: value as PortfolioCategory })
-                  }
-                >
-                  <SelectTrigger className="mt-1">
-                    <SelectValue placeholder="카테고리 선택" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {categories.map(([value, label]) => (
-                      <SelectItem key={value} value={value}>
-                        {label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label>클라이언트</Label>
-                <Input
-                  value={formData.client_name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, client_name: e.target.value })
-                  }
-                  placeholder="클라이언트명"
-                  className="mt-1"
-                />
-              </div>
-            </div>
+                {/* 링크 URL - 필수 */}
+                <div>
+                  <Label>링크 URL <span className="text-red-500">*</span></Label>
+                  <div className="flex gap-2 mt-1">
+                    <Input
+                      value={formData.link_url}
+                      onChange={(e) => {
+                        setFormData({ ...formData, link_url: e.target.value });
+                        setMetaFetchStatus('idle');
+                      }}
+                      placeholder="https://blog.naver.com/... 또는 https://youtu.be/..."
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="flex-shrink-0 whitespace-nowrap"
+                      disabled={isFetchingMeta || !formData.link_url.trim()}
+                      onClick={handleFetchMeta}
+                    >
+                      {isFetchingMeta ? '가져오는 중...' : '정보 가져오기'}
+                    </Button>
+                  </div>
+                  {metaFetchStatus === 'success' && (
+                    <p className="text-xs text-green-600 mt-1">✓ 제목과 썸네일이 자동으로 설정되었습니다.</p>
+                  )}
+                  {metaFetchStatus === 'error' && (
+                    <p className="text-xs text-orange-500 mt-1">⚠ 자동 정보를 가져오지 못했습니다. 제목을 직접 입력해주세요.</p>
+                  )}
+                </div>
 
-            {/* 소속 */}
-            <div>
-              <Label>소속 / 작업 당시 직장</Label>
-              <Input
-                value={formData.affiliation}
-                onChange={(e) =>
-                  setFormData({ ...formData, affiliation: e.target.value })
-                }
-                placeholder="예: PIXEL-LOG  또는  이전 직장명"
-                className="mt-1"
-              />
-              <div className="mt-2 rounded-lg border border-navy/10 bg-navy/[0.03] px-3 py-2 text-xs text-muted-foreground space-y-1">
-                <p className="font-semibold text-navy/70">소속 입력 규칙</p>
-                <p>• <span className="font-mono font-bold text-navy">PIXEL-LOG</span> 입력 시 → &quot;PIXEL-LOG 작업&quot; 섹션으로 분류</p>
-                <p>• 이전 직장명 입력 시 → &quot;이전 직장 작업&quot; 섹션으로 분류 (회사명별로 그룹화)</p>
-                <p>• 비워두면 → 구분 없이 표시</p>
-              </div>
-            </div>
+                {/* 썸네일 미리보기 (자동 설정) */}
+                {formData.thumbnail_url && (
+                  <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-border bg-slate-100">
+                    <Image
+                      src={formData.thumbnail_url}
+                      alt="썸네일 미리보기"
+                      fill
+                      className="object-cover"
+                      sizes="672px"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                    <span className="absolute bottom-2 right-2 text-[10px] bg-black/60 text-white px-2 py-0.5 rounded">
+                      썸네일 미리보기
+                    </span>
+                  </div>
+                )}
 
-            {/* 썸네일 URL + 파일 업로드 */}
-            <div>
-              <Label>썸네일 *</Label>
-              <div className="flex gap-2 mt-1">
-                <Input
-                  value={formData.thumbnail_url}
-                  onChange={(e) =>
-                    setFormData({ ...formData, thumbnail_url: e.target.value })
-                  }
-                  placeholder="https://... 또는 오른쪽 버튼으로 파일 업로드"
-                />
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="flex-shrink-0"
-                  disabled={uploading === 'thumbnail'}
-                  onClick={() => thumbnailFileRef.current?.click()}
-                >
-                  <Upload className="h-4 w-4 mr-1" />
-                  {uploading === 'thumbnail' ? '업로드 중...' : '파일'}
-                </Button>
-                <input
-                  ref={thumbnailFileRef}
-                  type="file"
-                  accept="image/*"
-                  className="hidden"
-                  onChange={handleThumbnailUpload}
-                />
-              </div>
-              {formData.thumbnail_url && (
-                <div className="mt-2 relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-border bg-slate-100">
-                  <Image
-                    src={formData.thumbnail_url}
-                    alt="썸네일 미리보기"
-                    fill
-                    className="object-cover"
-                    sizes="672px"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).style.display = 'none';
-                    }}
+                {/* 제목 (자동 입력, 수정 가능) */}
+                <div>
+                  <Label>제목 *</Label>
+                  <Input
+                    value={formData.title}
+                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                    placeholder="링크에서 자동으로 가져오거나 직접 입력하세요"
+                    className="mt-1"
                   />
-                  <span className="absolute bottom-2 right-2 text-[10px] bg-black/60 text-white px-2 py-0.5 rounded">
-                    썸네일 미리보기
-                  </span>
                 </div>
-              )}
-            </div>
 
-            {/* 외부 링크 (바로가기) */}
-            <div>
-              <Label>외부 링크 (바로가기)</Label>
-              <Input
-                value={formData.link_url}
-                onChange={(e) =>
-                  setFormData({ ...formData, link_url: e.target.value })
-                }
-                placeholder="https://youtube.com/...  또는  https://behance.net/..."
-                className="mt-1"
-              />
-              <p className="text-xs text-muted-foreground mt-1">
-                입력 시 카드에 &quot;바로가기&quot; 버튼이 표시됩니다. 유튜브, Behance, 외부 사이트 등 연결 가능.
-              </p>
-              <p className="text-xs text-blue-500 mt-0.5">
-                💡 YouTube URL 입력 시 썸네일이 자동으로 설정됩니다.
-              </p>
-            </div>
+                {/* 소속 */}
+                <AffiliationField />
 
-            {/* 상세 이미지 목록 */}
-            <div>
-              <Label>상세 이미지 URL 목록</Label>
-              <p className="text-xs text-muted-foreground mt-0.5 mb-2">
-                포트폴리오 상세 보기 시 보여줄 이미지들을 추가하세요.
-              </p>
-              {/* 추가된 이미지 목록 */}
-              {formData.images.length > 0 && (
-                <div className="space-y-2 mb-3">
-                  {formData.images.map((url, idx) => (
-                    <div key={idx} className="flex items-center gap-2 group">
-                      <div className="relative w-14 h-10 rounded overflow-hidden border border-border bg-slate-100 flex-shrink-0">
-                        <Image src={url} alt={`image-${idx}`} fill className="object-cover" sizes="56px" />
-                      </div>
-                      <span className="flex-1 text-xs text-muted-foreground truncate font-mono">
-                        {url}
-                      </span>
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="h-7 w-7 p-0 text-red-400 hover:text-red-600 hover:bg-red-50 flex-shrink-0"
-                        onClick={() =>
-                          setFormData({
-                            ...formData,
-                            images: formData.images.filter((_, i) => i !== idx),
-                          })
-                        }
-                      >
-                        <X className="h-3.5 w-3.5" />
-                      </Button>
-                    </div>
-                  ))}
+                {/* 날짜 + 순서 + 공개 */}
+                <BottomFields />
+              </>
+            ) : (
+              /* ===== 일반 폼 (디자인, 개발, 광고 등) ===== */
+              <>
+                {/* 제목 */}
+                <div>
+                  <Label>제목 *</Label>
+                  <Input
+                    value={formData.title}
+                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                    placeholder="포트폴리오 제목"
+                    className="mt-1"
+                  />
                 </div>
-              )}
-              {/* 새 이미지 URL 추가 입력 */}
-              <div className="flex gap-2">
-                <Input
-                  value={newImageUrl}
-                  onChange={(e) => setNewImageUrl(e.target.value)}
-                  placeholder="이미지 URL 입력..."
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      e.preventDefault();
-                      const trimmed = newImageUrl.trim();
-                      if (trimmed && !formData.images.includes(trimmed)) {
-                        setFormData({ ...formData, images: [...formData.images, trimmed] });
-                        setNewImageUrl('');
+
+                {/* 카테고리 + 클라이언트 */}
+                <CategoryClientFields />
+
+                {/* 소속 */}
+                <AffiliationField />
+
+                {/* 썸네일 URL + 파일 업로드 */}
+                <div>
+                  <Label>썸네일</Label>
+                  <div className="flex gap-2 mt-1">
+                    <Input
+                      value={formData.thumbnail_url}
+                      onChange={(e) =>
+                        setFormData({ ...formData, thumbnail_url: e.target.value })
                       }
+                      placeholder="https://... 또는 오른쪽 버튼으로 파일 업로드"
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="flex-shrink-0"
+                      disabled={uploading === 'thumbnail'}
+                      onClick={() => thumbnailFileRef.current?.click()}
+                    >
+                      <Upload className="h-4 w-4 mr-1" />
+                      {uploading === 'thumbnail' ? '업로드 중...' : '파일'}
+                    </Button>
+                    <input
+                      ref={thumbnailFileRef}
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={handleThumbnailUpload}
+                    />
+                  </div>
+                  {formData.thumbnail_url && (
+                    <div className="mt-2 relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-border bg-slate-100">
+                      <Image
+                        src={formData.thumbnail_url}
+                        alt="썸네일 미리보기"
+                        fill
+                        className="object-cover"
+                        sizes="672px"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                      <span className="absolute bottom-2 right-2 text-[10px] bg-black/60 text-white px-2 py-0.5 rounded">
+                        썸네일 미리보기
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                {/* 외부 링크 (바로가기) */}
+                <div>
+                  <Label>외부 링크 (바로가기)</Label>
+                  <Input
+                    value={formData.link_url}
+                    onChange={(e) =>
+                      setFormData({ ...formData, link_url: e.target.value })
                     }
-                  }}
-                />
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="flex-shrink-0"
-                  onClick={() => {
-                    const trimmed = newImageUrl.trim();
-                    if (trimmed && !formData.images.includes(trimmed)) {
-                      setFormData({ ...formData, images: [...formData.images, trimmed] });
-                      setNewImageUrl('');
+                    placeholder="https://youtube.com/...  또는  https://behance.net/..."
+                    className="mt-1"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">
+                    입력 시 카드에 &quot;바로가기&quot; 버튼이 표시됩니다. 유튜브, Behance, 외부 사이트 등 연결 가능.
+                  </p>
+                </div>
+
+                {/* 상세 이미지 목록 */}
+                <div>
+                  <Label>상세 이미지 URL 목록</Label>
+                  <p className="text-xs text-muted-foreground mt-0.5 mb-2">
+                    포트폴리오 상세 보기 시 보여줄 이미지들을 추가하세요.
+                  </p>
+                  {formData.images.length > 0 && (
+                    <div className="space-y-2 mb-3">
+                      {formData.images.map((url, idx) => (
+                        <div key={idx} className="flex items-center gap-2 group">
+                          <div className="relative w-14 h-10 rounded overflow-hidden border border-border bg-slate-100 flex-shrink-0">
+                            <Image src={url} alt={`image-${idx}`} fill className="object-cover" sizes="56px" />
+                          </div>
+                          <span className="flex-1 text-xs text-muted-foreground truncate font-mono">
+                            {url}
+                          </span>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            className="h-7 w-7 p-0 text-red-400 hover:text-red-600 hover:bg-red-50 flex-shrink-0"
+                            onClick={() =>
+                              setFormData({
+                                ...formData,
+                                images: formData.images.filter((_, i) => i !== idx),
+                              })
+                            }
+                          >
+                            <X className="h-3.5 w-3.5" />
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="flex gap-2">
+                    <Input
+                      value={newImageUrl}
+                      onChange={(e) => setNewImageUrl(e.target.value)}
+                      placeholder="이미지 URL 입력..."
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const trimmed = newImageUrl.trim();
+                          if (trimmed && !formData.images.includes(trimmed)) {
+                            setFormData({ ...formData, images: [...formData.images, trimmed] });
+                            setNewImageUrl('');
+                          }
+                        }
+                      }}
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="flex-shrink-0"
+                      onClick={() => {
+                        const trimmed = newImageUrl.trim();
+                        if (trimmed && !formData.images.includes(trimmed)) {
+                          setFormData({ ...formData, images: [...formData.images, trimmed] });
+                          setNewImageUrl('');
+                        }
+                      }}
+                    >
+                      <ImagePlus className="h-4 w-4 mr-1" />
+                      URL 추가
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="flex-shrink-0"
+                      disabled={uploading === 'image'}
+                      onClick={() => imageFileRef.current?.click()}
+                    >
+                      <Upload className="h-4 w-4 mr-1" />
+                      {uploading === 'image' ? '업로드 중...' : '파일'}
+                    </Button>
+                    <input
+                      ref={imageFileRef}
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={handleImageFileUpload}
+                    />
+                  </div>
+                </div>
+
+                {/* 설명 */}
+                <div>
+                  <Label>설명</Label>
+                  <Textarea
+                    value={formData.description}
+                    onChange={(e) =>
+                      setFormData({ ...formData, description: e.target.value })
                     }
-                  }}
-                >
-                  <ImagePlus className="h-4 w-4 mr-1" />
-                  URL 추가
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="flex-shrink-0"
-                  disabled={uploading === 'image'}
-                  onClick={() => imageFileRef.current?.click()}
-                >
-                  <Upload className="h-4 w-4 mr-1" />
-                  {uploading === 'image' ? '업로드 중...' : '파일'}
-                </Button>
-                <input
-                  ref={imageFileRef}
-                  type="file"
-                  accept="image/*"
-                  className="hidden"
-                  onChange={handleImageFileUpload}
-                />
-              </div>
-            </div>
+                    placeholder="포트폴리오 설명"
+                    rows={4}
+                    className="mt-1"
+                  />
+                </div>
 
-            {/* 설명 */}
-            <div>
-              <Label>설명</Label>
-              <Textarea
-                value={formData.description}
-                onChange={(e) =>
-                  setFormData({ ...formData, description: e.target.value })
-                }
-                placeholder="포트폴리오 설명"
-                rows={4}
-                className="mt-1"
-              />
-            </div>
-
-            {/* 날짜 + 정렬 순서 */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label>프로젝트 날짜</Label>
-                <Input
-                  type="month"
-                  value={formData.project_date}
-                  onChange={(e) =>
-                    setFormData({ ...formData, project_date: e.target.value })
-                  }
-                  className="mt-1"
-                />
-              </div>
-              <div>
-                <Label>정렬 순서</Label>
-                <Input
-                  type="number"
-                  value={formData.display_order}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      display_order: parseInt(e.target.value) || 0,
-                    })
-                  }
-                  className="mt-1"
-                />
-              </div>
-            </div>
-
-            {/* 공개 여부 */}
-            <div className="flex items-center gap-3 pt-1">
-              <Switch
-                checked={formData.is_published}
-                onCheckedChange={(checked) =>
-                  setFormData({ ...formData, is_published: checked })
-                }
-              />
-              <div>
-                <Label className="cursor-pointer">공개 여부</Label>
-                <p className="text-xs text-muted-foreground">
-                  {formData.is_published ? '홈페이지에 공개됩니다.' : '비공개 상태입니다.'}
-                </p>
-              </div>
-            </div>
-
+                {/* 날짜 + 순서 + 공개 */}
+                <BottomFields />
+              </>
+            )}
           </div>
+
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsFormOpen(false)}>
               취소
