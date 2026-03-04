@@ -33,7 +33,7 @@ export function AICertificationSection() {
                         <span className="text-gold/80 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
                             QUALIFICATION
                         </span>
-                        <h2 className="section-title text-white font-black tracking-tighter mb-6">
+                        <h2 className="section-title !text-white font-black tracking-tighter mb-6">
                             AI 기반 프로덕트<br />디자인 역량
                         </h2>
                         <div className="w-20 h-[3px] bg-gradient-to-r from-gold to-gold/40 mb-10 rounded-full" />
