@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://pixel-log.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://pixel-log-ten.vercel.app'),
   title: {
     default: 'PIXEL-LOG | 디자인, 개발, 마케팅 원스톱 솔루션',
     template: '%s | PIXEL-LOG',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://pixel-log.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pixel-log-ten.vercel.app',
     siteName: 'PIXEL-LOG',
     title: 'PIXEL-LOG | 디자인, 개발, 마케팅 원스톱 솔루션',
     description:
