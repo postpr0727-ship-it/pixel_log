@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
 import { PhilosophySection } from '@/components/sections';
 import { DevServicesSection } from './DevServicesSection';
+import { AICertificationSection } from './AICertificationSection';
 import { PortfolioGrid } from '@/components/portfolio';
 import { portfolioService } from '@/lib/supabase';
 
@@ -48,6 +49,7 @@ export default async function DevPage() {
         items={philosophyItems}
       />
       <DevServicesSection />
+      <AICertificationSection />
       <PortfolioGrid portfolios={portfolios} />
     </>
   );
