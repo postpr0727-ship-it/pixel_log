@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     const portfolio = await portfolioService.create({
       title: data.title,
       category: data.category,
-      thumbnail_url: data.thumbnail_url,
+      thumbnail_url: data.thumbnail_url || '',
       images: data.images,
       description: data.description || '',
       client_name: data.client_name,

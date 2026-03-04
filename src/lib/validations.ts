@@ -41,7 +41,7 @@ export const portfolioFormSchema = z.object({
     'dev_software',
     'video'
   ], { message: '카테고리를 선택해주세요.' }),
-  thumbnail_url: z.string().url('올바른 URL을 입력해주세요.'),
+  thumbnail_url: z.string().url('올바른 URL을 입력해주세요.').optional().or(z.literal('')),
   images: z.array(z.string().url('올바른 URL을 입력해주세요.')).default([]),
   description: z.string().max(2000, '설명은 2000자 이하로 입력해주세요.').optional(),
   client_name: z.string().max(100, '클라이언트명은 100자 이하로 입력해주세요.').optional(),

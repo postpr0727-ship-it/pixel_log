@@ -90,6 +90,22 @@ function PortfoliosContent() {
   const thumbnailFileRef = useRef<HTMLInputElement>(null);
   const imageFileRef = useRef<HTMLInputElement>(null);
 
+  // YouTube link → auto thumbnail
+  useEffect(() => {
+    if (!formData.link_url) return;
+    const ytMatch = formData.link_url.match(
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/
+    );
+    if (ytMatch) {
+      const videoId = ytMatch[1];
+      const autoThumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+      if (!formData.thumbnail_url) {
+        setFormData((prev) => ({ ...prev, thumbnail_url: autoThumb }));
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formData.link_url]);
+
   const uploadFile = async (file: File): Promise<string> => {
     const fd = new FormData();
     fd.append('file', file);
@@ -548,6 +564,9 @@ function PortfoliosContent() {
               />
               <p className="text-xs text-muted-foreground mt-1">
                 입력 시 카드에 &quot;바로가기&quot; 버튼이 표시됩니다. 유튜브, Behance, 외부 사이트 등 연결 가능.
+              </p>
+              <p className="text-xs text-blue-500 mt-0.5">
+                💡 YouTube URL 입력 시 썸네일이 자동으로 설정됩니다.
               </p>
             </div>
 
