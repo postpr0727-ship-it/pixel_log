@@ -188,18 +188,26 @@ function LinkOnlyFormContent({
 
       {/* 소속 */}
       <div>
-        <Label>소속 / 작업 당시 직장</Label>
-        <Input
-          value={formData.affiliation}
-          onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
-          placeholder="예: PIXEL-LOG  또는  이전 직장명"
-          className="mt-1"
-        />
-        <div className="mt-2 rounded-lg border border-navy/10 bg-navy/[0.03] px-3 py-2 text-xs text-muted-foreground space-y-1">
-          <p className="font-semibold text-navy/70">소속 입력 규칙</p>
-          <p>• <span className="font-mono font-bold text-navy">PIXEL-LOG</span> 입력 시 → &quot;PIXEL-LOG 작업&quot; 섹션으로 분류</p>
-          <p>• 이전 직장명 입력 시 → &quot;이전 직장 작업&quot; 섹션으로 분류</p>
-          <p>• 비워두면 → 구분 없이 표시</p>
+        <Label>소속</Label>
+        <div className="flex gap-2 mt-1">
+          {[
+            { value: 'PIXEL-LOG', label: 'PIXEL-LOG' },
+            { value: '이전 소속 직장', label: '이전 소속 직장' },
+            { value: '', label: '구분 없음' },
+          ].map(({ value, label }) => (
+            <button
+              key={label}
+              type="button"
+              onClick={() => setFormData({ ...formData, affiliation: value })}
+              className={`px-3 py-1.5 text-sm font-bold rounded-lg border transition-colors ${
+                formData.affiliation === value
+                  ? 'bg-navy text-white border-navy'
+                  : 'border-border text-navy/60 hover:border-navy/40'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -290,18 +298,26 @@ function FullFormContent({
 
       {/* 소속 */}
       <div>
-        <Label>소속 / 작업 당시 직장</Label>
-        <Input
-          value={formData.affiliation}
-          onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
-          placeholder="예: PIXEL-LOG  또는  이전 직장명"
-          className="mt-1"
-        />
-        <div className="mt-2 rounded-lg border border-navy/10 bg-navy/[0.03] px-3 py-2 text-xs text-muted-foreground space-y-1">
-          <p className="font-semibold text-navy/70">소속 입력 규칙</p>
-          <p>• <span className="font-mono font-bold text-navy">PIXEL-LOG</span> 입력 시 → &quot;PIXEL-LOG 작업&quot; 섹션으로 분류</p>
-          <p>• 이전 직장명 입력 시 → &quot;이전 직장 작업&quot; 섹션으로 분류 (회사명별로 그룹화)</p>
-          <p>• 비워두면 → 구분 없이 표시</p>
+        <Label>소속</Label>
+        <div className="flex gap-2 mt-1">
+          {[
+            { value: 'PIXEL-LOG', label: 'PIXEL-LOG' },
+            { value: '이전 소속 직장', label: '이전 소속 직장' },
+            { value: '', label: '구분 없음' },
+          ].map(({ value, label }) => (
+            <button
+              key={label}
+              type="button"
+              onClick={() => setFormData({ ...formData, affiliation: value })}
+              className={`px-3 py-1.5 text-sm font-bold rounded-lg border transition-colors ${
+                formData.affiliation === value
+                  ? 'bg-navy text-white border-navy'
+                  : 'border-border text-navy/60 hover:border-navy/40'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </div>
 
