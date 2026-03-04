@@ -185,3 +185,4 @@ CREATE POLICY "Public can view published video links"
 -- Run this if the table was created before these columns were added:
 ALTER TABLE portfolios ADD COLUMN IF NOT EXISTS affiliation TEXT;
 ALTER TABLE portfolios ADD COLUMN IF NOT EXISTS link_url TEXT;
+ALTER TABLE portfolios ADD COLUMN IF NOT EXISTS project_date VARCHAR(50);
