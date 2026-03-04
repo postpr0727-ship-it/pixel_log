@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<title>HTTP 404 Error</title>
+<meta name="description" content="오류가 발생하였습니다.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://license.kpc.or.kr/resource/kpc/img/icon/favicon.ico">
+<!-- KPC Style -->
+<link href="https://license.kpc.or.kr/resource/kpc/css/notosans.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/common.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/layout.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/sub.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/remodal.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/jquery-ui.css" rel="stylesheet" media="all">
+<link href="https://license.kpc.or.kr/resource/kpc/css/jquery-accordion-menu.css" rel="stylesheet" type="text/css">
+<link href="https://license.kpc.or.kr/resource/kpc/css/bootstrap.css" rel="stylesheet">
+<link href="https://license.kpc.or.kr/resource/kpc/css/bootstrap-modal.css" rel="stylesheet">
+<!-- KPC Script -->
+<script src="https://license.kpc.or.kr/resource/kpc/js/jquery.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/jquery-ui.min.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/common.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/jquery-accordion-menu.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/jquery.validate.min.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/bootstrap-modalmanager.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/bootstrap-modal.js"></script>
+<script src="https://license.kpc.or.kr/resource/kpc/js/underscore-min.js"></script>
+<script src="https://license.kpc.or.kr/rainmac/admin/cmm/js/common.js"></script>
+</head>
+
+<body cz-shortcut-listen="true" style="">
+<div class="errorpage" style="width:100%">
+	<div class="error_hader tr"><img src="https://license.kpc.or.kr/resource/kpc/img/sub/error_imgtop.png" alt="kPC 이이콘"></div>
+	<div class="error_body">
+		<ul>
+			<li class="col-3 col-12-s fl img_none"><img src="https://license.kpc.or.kr/resource/kpc/img/sub/error_img.png" alt="에러페이지 이미지"></li>
+			<li class="col-9 col-12-s">
+				<ul class="pd_l30">
+					<li><p class="p"><span class="text_color_black h1">죄송합니다. </span></p></li>
+					<li><p class="p">페이지의 주소가 잘못 입력되었거나,<br> 주소가 변경 혹은 삭제되어 요청하신 페이지를 찾을 수 없습니다.<br>입력하신 주소가 정확한지 다시 한번 확인해 주시기 바랍니다.</p> 
+					HTTP 404 Error<br><br>웹 페이지를 찾을 수 없습니다.
+					</li>
+					<li class="mg_t30"><a href="javascript:fnGoHome('','');" class="btn btn_s col-6 col-6-s btn_default">메인으로</a> 
+					<!-- <a href="javascript:document.referrer;" class="btn btn_s col-3 col-6-s btn_default">이전페이지</a></li> -->
+				</li></ul>	
+			</li>
+		</ul> 
+	</div>
+</div>
+<!-- basic scripts -->
+
+
+<!-- bootstrap -->
+<script src="https://license.kpc.or.kr/rainmac/admin/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery.autosize -->
+<script src="https://license.kpc.or.kr/rainmac/admin/cmm/js/jquery/jquery.autosize.min.js"></script>
+<!-- 공통 스크립트 -->
+<script src="https://license.kpc.or.kr/rainmac/admin/cmm/js/common.js"></script>
+<!-- /basic scripts -->
+
+
+</body></html>

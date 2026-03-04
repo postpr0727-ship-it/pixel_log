@@ -9,10 +9,10 @@ export function GTQCertificationSection() {
             {/* Background Image with Overlays */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/gtq-cert.png"
-                    alt="GTQ Certification Background"
+                    src="/images/gtq-logo.png"
+                    alt="GTQ Official Logo"
                     fill
-                    className="object-cover object-[center_30%] opacity-60"
+                    className="object-contain p-20 opacity-40 transform translate-x-1/4"
                     quality={90}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/30" />
