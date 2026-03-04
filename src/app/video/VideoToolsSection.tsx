@@ -52,13 +52,13 @@ export function VideoToolsSection() {
                             <div className="relative z-10 bg-white/5 border border-white/10 rounded-[2.5rem] p-8 lg:p-12 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 overflow-hidden h-full">
                                 {/* Tool Icon Container */}
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-24 h-24 mb-10 relative">
+                                    <div className={`${tool.name === 'CapCut' ? 'w-48' : 'w-24'} h-24 mb-10 relative`}>
                                         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500" />
                                         <div className="relative w-full h-full flex items-center justify-center p-2">
                                             <Image
                                                 src={tool.image}
                                                 alt={tool.name}
-                                                width={96}
+                                                width={tool.name === 'CapCut' ? 192 : 96}
                                                 height={96}
                                                 className="object-contain"
                                             />
