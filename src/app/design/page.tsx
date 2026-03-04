@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
 import { PhilosophySection } from '@/components/sections';
 import { DesignServicesSection } from './DesignServicesSection';
+import { DesignToolsSection } from './DesignToolsSection';
+import { GTQCertificationSection } from './GTQCertificationSection';
 import { PortfolioGrid } from '@/components/portfolio';
 import { portfolioService } from '@/lib/supabase';
 
@@ -48,6 +50,8 @@ export default async function DesignPage() {
         items={philosophyItems}
       />
       <DesignServicesSection />
+      <DesignToolsSection />
+      <GTQCertificationSection />
       <PortfolioGrid portfolios={portfolios} />
     </>
   );
