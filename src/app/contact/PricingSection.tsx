@@ -8,7 +8,7 @@ const serviceAreas = [
   { name: '웹 개발', sub: '홈페이지 · 쇼핑몰 · 시스템' },
   { name: '블로그 마케팅', sub: '포스팅 · SEO · 운영 대행' },
   { name: '온라인 광고', sub: '키워드 · SNS · 퍼포먼스' },
-  { name: '영상 제작', sub: '기획 · 촬영 · 편집' },
+  { name: '영상 제작', sub: '촬영 · 편집' },
 ];
 
 const steps = [
