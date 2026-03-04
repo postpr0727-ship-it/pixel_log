@@ -56,10 +56,10 @@ export async function GET() {
   try {
     const consultations = await consultationService.getAllAdmin();
     return NextResponse.json({ data: consultations });
-  } catch (error) {
-    console.error('Error fetching consultations:', error);
+  } catch (error: any) {
+    console.error('Error fetching consultations:', { message: error.message, stack: error.stack });
     return NextResponse.json(
-      { error: 'Failed to fetch consultations' },
+      { error: 'Failed to fetch consultations', details: error.message },
       { status: 500 }
     );
   }
