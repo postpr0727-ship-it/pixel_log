@@ -5,6 +5,7 @@ import Google from 'next-auth/providers/google';
 console.log("Auth Debug - Client ID:", process.env.AUTH_GOOGLE_ID ? "Present" : "Missing");
 console.log("Auth Debug - Client Secret:", process.env.AUTH_GOOGLE_SECRET ? "Present" : "Missing");
 console.log("Auth Debug - Admin Email:", process.env.ADMIN_EMAIL ? "Present" : "Missing");
+console.log("Auth Debug - Auth Secret:", process.env.AUTH_SECRET ? "Present" : "Missing");
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     trustHost: true, // Required for localhost and production
@@ -19,19 +20,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         strategy: 'jwt',
         maxAge: 30 * 24 * 60 * 60, // 30 days
         updateAge: 24 * 60 * 60, // 24 hours (session will be updated if older than this)
-    },
-    cookies: {
-        sessionToken: {
-            name: process.env.NODE_ENV === 'production'
-                ? '__Secure-next-auth.session-token'
-                : 'next-auth.session-token',
-            options: {
-                httpOnly: true,
-                sameSite: 'lax',
-                path: '/',
-                secure: process.env.NODE_ENV === 'production',
-            },
-        },
     },
     callbacks: {
         async signIn({ user }) {
