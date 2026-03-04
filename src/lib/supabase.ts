@@ -42,7 +42,6 @@ export const portfolioService = {
       .from('portfolios')
       .select('*')
       .eq('is_published', true)
-      .order('project_date', { ascending: false, nullsFirst: false })
       .order('created_at', { ascending: false });
 
     if (category) {
@@ -70,7 +69,6 @@ export const portfolioService = {
     const { data, error } = await serverClient
       .from('portfolios')
       .select('*')
-      .order('project_date', { ascending: false, nullsFirst: false })
       .order('created_at', { ascending: false });
 
     if (error) throw error;
@@ -118,7 +116,6 @@ export const portfolioService = {
       .select('*')
       .eq('is_published', true)
       .in('category', categories)
-      .order('project_date', { ascending: false, nullsFirst: false })
       .order('created_at', { ascending: false });
 
     if (error) throw error;
