@@ -41,21 +41,12 @@ export const metadata: Metadata = {
     title: 'PIXEL-LOG | 디자인, 개발, 마케팅 원스톱 솔루션',
     description:
       '당신의 비즈니스를 픽셀 하나까지 완벽하게. 브랜드 디자인, 웹 개발, 블로그 마케팅, 영상 제작까지 원스톱 솔루션을 제공합니다.',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'PIXEL-LOG',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'PIXEL-LOG | 디자인, 개발, 마케팅 원스톱 솔루션',
     description:
       '당신의 비즈니스를 픽셀 하나까지 완벽하게. 브랜드 디자인, 웹 개발, 블로그 마케팅, 영상 제작까지 원스톱 솔루션을 제공합니다.',
-    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,
