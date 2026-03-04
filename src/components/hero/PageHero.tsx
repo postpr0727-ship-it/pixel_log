@@ -12,7 +12,7 @@ interface BreadcrumbItem {
 interface PageHeroProps {
   title: string;
   titleEn?: string;
-  description?: string;
+  description?: React.ReactNode;
   breadcrumbs?: BreadcrumbItem[];
 }
 
@@ -100,7 +100,7 @@ export function PageHero({
             {title}
           </h1>
           {description && (
-            <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium break-keep">
               {description}
             </p>
           )}

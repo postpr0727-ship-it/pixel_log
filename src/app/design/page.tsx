@@ -40,7 +40,7 @@ export default async function DesignPage() {
       <PageHero
         title="디자인 서비스"
         titleEn="DESIGN"
-        description="브랜드의 가치를 시각적으로 표현합니다. 브랜딩부터 웹, 인쇄까지 모든 디자인 솔루션을 제공합니다."
+        description={<>브랜드의 가치를 시각적으로 표현합니다.<br className="hidden md:block" /> 브랜딩부터 웹, 인쇄까지 모든 디자인 솔루션을 제공합니다.</>}
         breadcrumbs={[{ label: '디자인' }]}
       />
       <PhilosophySection
