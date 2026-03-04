@@ -46,7 +46,6 @@ export const portfolioFormSchema = z.object({
   affiliation: z.string().max(100, '소속은 100자 이하로 입력해주세요.').optional(),
   link_url: z.string().url('올바른 URL을 입력해주세요.').optional().or(z.literal('')),
   is_published: z.boolean().default(false),
-  display_order: z.number().int().min(0).default(0)
 });
 
 export type PortfolioFormSchema = z.infer<typeof portfolioFormSchema>;

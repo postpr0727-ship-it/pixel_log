@@ -65,7 +65,6 @@ type FormData = {
   affiliation: string;
   link_url: string;
   is_published: boolean;
-  display_order: number;
 };
 
 interface CategoryFormProps {
@@ -204,26 +203,15 @@ function LinkOnlyFormContent({
         </div>
       </div>
 
-      {/* 날짜 + 정렬 순서 */}
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <Label>프로젝트 날짜</Label>
-          <Input
-            type="month"
-            value={formData.project_date}
-            onChange={(e) => setFormData({ ...formData, project_date: e.target.value })}
-            className="mt-1"
-          />
-        </div>
-        <div>
-          <Label>정렬 순서</Label>
-          <Input
-            type="number"
-            value={formData.display_order}
-            onChange={(e) => setFormData({ ...formData, display_order: parseInt(e.target.value) || 0 })}
-            className="mt-1"
-          />
-        </div>
+      {/* 프로젝트 날짜 */}
+      <div>
+        <Label>프로젝트 날짜</Label>
+        <Input
+          type="month"
+          value={formData.project_date}
+          onChange={(e) => setFormData({ ...formData, project_date: e.target.value })}
+          className="mt-1"
+        />
       </div>
 
       {/* 공개 여부 */}
@@ -470,28 +458,15 @@ function FullFormContent({
         />
       </div>
 
-      {/* 날짜 + 정렬 순서 */}
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <Label>프로젝트 날짜</Label>
-          <Input
-            type="month"
-            value={formData.project_date}
-            onChange={(e) => setFormData({ ...formData, project_date: e.target.value })}
-            className="mt-1"
-          />
-        </div>
-        <div>
-          <Label>정렬 순서</Label>
-          <Input
-            type="number"
-            value={formData.display_order}
-            onChange={(e) =>
-              setFormData({ ...formData, display_order: parseInt(e.target.value) || 0 })
-            }
-            className="mt-1"
-          />
-        </div>
+      {/* 프로젝트 날짜 */}
+      <div>
+        <Label>프로젝트 날짜</Label>
+        <Input
+          type="month"
+          value={formData.project_date}
+          onChange={(e) => setFormData({ ...formData, project_date: e.target.value })}
+          className="mt-1"
+        />
       </div>
 
       {/* 공개 여부 */}
@@ -542,7 +517,6 @@ function PortfoliosContent() {
     affiliation: '',
     link_url: '',
     is_published: false,
-    display_order: 0,
   });
   const [newImageUrl, setNewImageUrl] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
@@ -680,7 +654,6 @@ function PortfoliosContent() {
         affiliation: portfolio.affiliation || '',
         link_url: portfolio.link_url || '',
         is_published: portfolio.is_published,
-        display_order: portfolio.display_order,
       });
     } else {
       setEditingPortfolio(null);
@@ -695,7 +668,6 @@ function PortfoliosContent() {
         affiliation: '',
         link_url: '',
         is_published: false,
-        display_order: portfolios.length,
       });
     }
     setNewImageUrl('');

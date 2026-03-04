@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
       affiliation: data.affiliation || undefined,
       link_url: data.link_url || undefined,
       is_published: data.is_published,
-      display_order: data.display_order,
+      display_order: 0,
     });
 
     return NextResponse.json(
