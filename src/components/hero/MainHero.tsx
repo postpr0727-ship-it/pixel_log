@@ -1,10 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export function MainHero() {
   return (
@@ -51,7 +48,7 @@ export function MainHero() {
             >
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold text-xs font-black tracking-widest uppercase">
-                Design Studio Label
+                PIXEL-LOG · Creative Studio
               </span>
             </motion.div>
 
@@ -63,9 +60,9 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              진정한 고퀄리티의 미학,
+              Crafted with Obsession,
               <br />
-              <span className="italic">Pixellog</span> 작업 사례를 확인하세요
+              <span className="italic">Built with Purpose.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -75,27 +72,10 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              준앤준솔루션의 디자인 레이블 '픽셀로그'는 디테일과 감각이 살아있는
-              최상의 결과물을 지향합니다.
+              We believe great work is born from discipline, not inspiration alone.
+              Every pixel is a decision. Every decision tells a story.
             </motion.p>
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-gold hover:bg-white text-navy font-bold px-10 py-8 text-xl rounded-2xl shadow-xl shadow-gold/20 transition-all duration-300 group"
-              >
-                <Link href="#services">
-                  작업 사례 보기
-                  <ChevronDown className="ml-2 h-6 w-6 transition-transform group-hover:translate-y-1" />
-                </Link>
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
       </div>
