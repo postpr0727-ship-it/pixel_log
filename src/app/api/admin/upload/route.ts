@@ -17,11 +17,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'No file provided' }, { status: 400 });
   }
 
-  const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+  const MAX_SIZE = 4 * 1024 * 1024; // 4MB (Vercel serverless body limit)
   const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
 
   if (file.size > MAX_SIZE) {
-    return NextResponse.json({ error: '파일 크기는 10MB 이하여야 합니다.' }, { status: 400 });
+    return NextResponse.json({ error: '파일 크기는 4MB 이하여야 합니다.' }, { status: 400 });
   }
   if (!ALLOWED_TYPES.includes(file.type)) {
     return NextResponse.json({ error: 'JPG, PNG, WebP, GIF 파일만 업로드 가능합니다.' }, { status: 400 });

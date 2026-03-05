@@ -529,7 +529,16 @@ function PortfoliosContent() {
     }
   };
 
+  const CLIENT_MAX_SIZE = 4 * 1024 * 1024; // 4MB
+  const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+
   const uploadFile = async (file: File): Promise<string> => {
+    if (file.size > CLIENT_MAX_SIZE) {
+      throw new Error('파일 크기는 4MB 이하여야 합니다.');
+    }
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      throw new Error('JPG, PNG, WebP, GIF 파일만 업로드 가능합니다.');
+    }
     const fd = new FormData();
     fd.append('file', file);
     const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
