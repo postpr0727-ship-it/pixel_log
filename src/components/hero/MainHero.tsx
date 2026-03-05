@@ -48,7 +48,7 @@ export function MainHero() {
             >
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold text-xs font-black tracking-widest uppercase">
-                PIXEL-LOG · Creative Studio
+                준앤준솔루션 · Creative Label
               </span>
             </motion.div>
 
@@ -72,8 +72,8 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              브랜드의 첫인상이 모든 것을 결정합니다.
-              디자인, 개발, 마케팅, 영상까지 — 픽셀로그가 비즈니스 성장의 크리에이티브 파트너가 되어드립니다.
+              준앤준솔루션의 크리에이티브 레이블 픽셀로그.
+              디자인, 개발, 마케팅, 영상까지 — 브랜드의 첫인상부터 비즈니스 성장까지 함께합니다.
             </motion.p>
 
           </motion.div>
