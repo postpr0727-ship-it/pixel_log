@@ -93,7 +93,7 @@ export function PortfolioCard({ portfolio, onClick }: PortfolioCardProps) {
         )}
 
         <div className="flex items-center justify-between">
-          <span className="text-white/35 text-[10px] font-semibold tracking-wider uppercase">
+          <span className="text-white/70 text-[11px] font-semibold tracking-wider uppercase">
             {portfolio.client_name || '\u00A0'}
           </span>
 
