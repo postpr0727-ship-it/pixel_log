@@ -464,12 +464,16 @@ function FullFormContent({
 
       {/* 설명 */}
       <div>
-        <Label>설명</Label>
+        <div className="flex items-center justify-between">
+          <Label>설명</Label>
+          <span className="text-xs text-muted-foreground">{formData.description.length} / 500</span>
+        </div>
         <Textarea
           value={formData.description}
           onChange={(e) => setFormData({ ...formData, description: e.target.value })}
           placeholder="포트폴리오 설명"
           rows={4}
+          maxLength={500}
           className="mt-1"
         />
       </div>
@@ -519,7 +523,9 @@ function PortfoliosContent() {
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingPortfolio, setEditingPortfolio] = useState<Portfolio | null>(null);
-  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; title: string } | null>(null);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+  const [saveSuccess, setSaveSuccess] = useState(false);
 
   // Form state
   const [formData, setFormData] = useState<FormData>({
@@ -637,13 +643,17 @@ function PortfoliosContent() {
 
   const fetchPortfolios = async () => {
     try {
+      setFetchError(null);
       const res = await fetch('/api/portfolios?admin=true');
       if (res.ok) {
         const data = await res.json();
         setPortfolios(data.data || []);
+      } else {
+        setFetchError('포트폴리오를 불러오지 못했습니다. 페이지를 새로고침해 주세요.');
       }
     } catch (error) {
       console.error('Failed to fetch portfolios:', error);
+      setFetchError('네트워크 오류로 포트폴리오를 불러오지 못했습니다.');
     } finally {
       setIsLoading(false);
     }
@@ -715,6 +725,8 @@ function PortfoliosContent() {
       if (res.ok) {
         fetchPortfolios();
         setIsFormOpen(false);
+        setSaveSuccess(true);
+        setTimeout(() => setSaveSuccess(false), 3000);
       } else {
         const errData = await res.json().catch(() => ({}));
         const firstIssue = errData?.details?.[0];
@@ -730,28 +742,36 @@ function PortfoliosContent() {
   };
 
   const handleDelete = async () => {
-    if (!deleteId) return;
+    if (!deleteTarget) return;
     try {
-      const res = await fetch(`/api/portfolios/${deleteId}`, { method: 'DELETE' });
+      const res = await fetch(`/api/portfolios/${deleteTarget.id}`, { method: 'DELETE' });
       if (res.ok) {
         fetchPortfolios();
-        setDeleteId(null);
+        setDeleteTarget(null);
+      } else {
+        alert('삭제에 실패했습니다. 다시 시도해 주세요.');
       }
     } catch (error) {
       console.error('Failed to delete portfolio:', error);
+      alert('네트워크 오류로 삭제에 실패했습니다.');
     }
   };
 
   const togglePublish = async (portfolio: Portfolio) => {
     try {
-      await fetch(`/api/portfolios/${portfolio.id}`, {
+      const res = await fetch(`/api/portfolios/${portfolio.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ is_published: !portfolio.is_published }),
       });
-      fetchPortfolios();
+      if (res.ok) {
+        fetchPortfolios();
+      } else {
+        alert('공개 설정 변경에 실패했습니다.');
+      }
     } catch (error) {
       console.error('Failed to toggle publish:', error);
+      alert('네트워크 오류로 공개 설정 변경에 실패했습니다.');
     }
   };
 
@@ -824,9 +844,18 @@ function PortfoliosContent() {
         </CardContent>
       </Card>
 
+      {/* 저장 성공 배너 */}
+      {saveSuccess && (
+        <div className="mb-4 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+          ✓ 포트폴리오가 저장되었습니다.
+        </div>
+      )}
+
       {/* Portfolio List */}
       {isLoading ? (
         <div className="text-center py-12 text-muted-foreground">로딩 중...</div>
+      ) : fetchError ? (
+        <div className="text-center py-12 text-red-500">{fetchError}</div>
       ) : filteredPortfolios.length === 0 ? (
         <Card>
           <CardContent className="py-12 text-center text-muted-foreground">
@@ -879,7 +908,7 @@ function PortfoliosContent() {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => setDeleteId(portfolio.id)}
+                      onClick={() => setDeleteTarget({ id: portfolio.id, title: portfolio.title })}
                       className="text-red-500 hover:text-red-600"
                     >
                       <Trash2 className="h-4 w-4" />
@@ -925,12 +954,12 @@ function PortfoliosContent() {
       </Dialog>
 
       {/* Delete Confirmation */}
-      <AlertDialog open={!!deleteId} onOpenChange={() => setDeleteId(null)}>
+      <AlertDialog open={!!deleteTarget} onOpenChange={() => setDeleteTarget(null)}>
         <AlertDialogContent aria-describedby={undefined}>
           <AlertDialogHeader>
             <AlertDialogTitle>포트폴리오 삭제</AlertDialogTitle>
             <AlertDialogDescription>
-              이 포트폴리오를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+              <span className="font-semibold text-foreground">&ldquo;{deleteTarget?.title}&rdquo;</span>을(를) 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
