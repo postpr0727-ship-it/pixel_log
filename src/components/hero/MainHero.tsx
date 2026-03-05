@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function MainHero() {
   return (
-    <section id="main-hero" className="relative min-h-[90vh] lg:min-h-screen flex items-start justify-center overflow-hidden bg-navy">
+    <section id="main-hero" className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-navy">
       {/* Hero Image Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -30,7 +30,7 @@ export function MainHero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-36 lg:pt-48 pb-16 lg:pb-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-24 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <motion.div
@@ -72,8 +72,8 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              We believe great work is born from discipline, not inspiration alone.
-              Every pixel is a decision. Every decision tells a story.
+              영감보다 규율에서 위대한 작업이 탄생한다고 믿습니다.
+              모든 픽셀은 하나의 결정이며, 모든 결정은 하나의 이야기입니다.
             </motion.p>
 
           </motion.div>
