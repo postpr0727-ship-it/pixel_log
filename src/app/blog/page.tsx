@@ -203,17 +203,17 @@ export default async function BlogMarketingPage() {
 
               {/* Premium Stats Grid */}
               <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto lg:mx-0 pt-4">
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 flex flex-col items-center justify-center text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
                   <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">SELECTION</div>
                   <div className="text-lg sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">TOP<br className="sm:hidden" /> 100</div>
                   <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">3,300만 개 중</div>
                 </div>
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 flex flex-col items-center justify-center text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
                   <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">PERCENTILE</div>
                   <div className="text-base sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">0.0003%</div>
                   <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">압도적인<br className="sm:hidden" />경쟁률</div>
                 </div>
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 flex flex-col items-center justify-center text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
                   <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">AUTHORITY</div>
                   <div className="text-lg sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">GRAND</div>
                   <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">공식 인증</div>
