@@ -7,6 +7,8 @@ import { GTQCertificationSection } from './GTQCertificationSection';
 import { PortfolioGrid } from '@/components/portfolio';
 import { portfolioService } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: '디자인 서비스',
   description: '브랜드 디자인, 웹 디자인, 인쇄 디자인까지 모든 디자인 솔루션을 제공합니다.',

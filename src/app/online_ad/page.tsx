@@ -5,6 +5,8 @@ import { AdServicesSection } from './AdServicesSection';
 import { PortfolioGrid } from '@/components/portfolio';
 import { portfolioService } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: '온라인 광고',
   description: '효과적인 온라인 광고로 타겟 고객에게 정확하게 도달합니다.',

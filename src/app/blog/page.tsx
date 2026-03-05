@@ -8,6 +8,8 @@ import { NaverYearBlogBadge } from '@/components/icons/NaverYearBlogBadge';
 import Image from 'next/image';
 import { Award, TrendingUp } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: '블로그 마케팅',
   description: '전문적인 콘텐츠로 브랜드 인지도를 높이고 잠재 고객을 유치합니다.',

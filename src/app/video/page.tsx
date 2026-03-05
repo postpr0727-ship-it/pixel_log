@@ -6,6 +6,8 @@ import { PortfolioGrid } from '@/components/portfolio';
 import { VideoToolsSection } from './VideoToolsSection';
 import { portfolioService } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: '영상 제작',
   description: '촬영과 편집 전문 - 전문적인 영상 콘텐츠를 제작합니다.',

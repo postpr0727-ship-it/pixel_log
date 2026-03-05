@@ -3,6 +3,8 @@ import { PageHero } from '@/components/hero';
 import { AboutContent } from './AboutContent';
 import { BlogCardSection } from './BlogCardSection';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'About',
   description: 'PIXEL-LOG의 스토리와 비전을 소개합니다. 디자인, 개발, 마케팅 분야의 전문성을 바탕으로 비즈니스 성장을 돕습니다.',

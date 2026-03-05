@@ -6,6 +6,8 @@ import { AICertificationSection } from './AICertificationSection';
 import { PortfolioGrid } from '@/components/portfolio';
 import { portfolioService } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: '웹 개발',
   description: '반응형 웹사이트부터 맞춤형 프로그램까지, 비즈니스에 필요한 개발 솔루션을 제공합니다.',
