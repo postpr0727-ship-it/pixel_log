@@ -127,12 +127,12 @@ export default async function BlogMarketingPage() {
               {/* Stats/Feature Grid */}
               <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
                 <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow text-center group">
-                  <div className="text-3xl font-black text-navy mb-1 group-hover:scale-110 transition-transform">TOP 1%</div>
-                  <div className="text-sm font-bold text-navy/40">전체 블로그 중 선정</div>
+                  <div className="text-2xl sm:text-3xl font-black text-navy mb-1 group-hover:scale-110 transition-transform">TOP 1%</div>
+                  <div className="text-xs sm:text-sm font-bold text-navy/40">전체 블로그 중 선정</div>
                 </div>
                 <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow text-center group">
-                  <div className="text-3xl font-black text-navy mb-1 group-hover:scale-110 transition-transform">Official</div>
-                  <div className="text-sm font-bold text-navy/40">네이버 공식 인증 파트너</div>
+                  <div className="text-2xl sm:text-3xl font-black text-navy mb-1 group-hover:scale-110 transition-transform">Official</div>
+                  <div className="text-xs sm:text-sm font-bold text-navy/40">네이버 공식 인증</div>
                 </div>
               </div>
             </div>
@@ -202,21 +202,21 @@ export default async function BlogMarketingPage() {
               </div>
 
               {/* Premium Stats Grid */}
-              <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0 pt-4">
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default">
-                  <div className="text-xs font-black text-navy/30 mb-2 tracking-widest">SELECTION</div>
-                  <div className="text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform">TOP 100</div>
-                  <div className="text-[10px] text-navy/40 mt-2 font-bold">3,300만 개 중</div>
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto lg:mx-0 pt-4">
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                  <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">SELECTION</div>
+                  <div className="text-lg sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">TOP<br className="sm:hidden" /> 100</div>
+                  <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">3,300만 개 중</div>
                 </div>
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default">
-                  <div className="text-xs font-black text-navy/30 mb-2 tracking-widest">PERCENTILE</div>
-                  <div className="text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform">0.0003%</div>
-                  <div className="text-[10px] text-navy/40 mt-2 font-bold">압도적인 경쟁률</div>
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                  <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">PERCENTILE</div>
+                  <div className="text-base sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">0.0003%</div>
+                  <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">압도적인<br className="sm:hidden" />경쟁률</div>
                 </div>
-                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default">
-                  <div className="text-xs font-black text-navy/30 mb-2 tracking-widest">AUTHORITY</div>
-                  <div className="text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform">GRAND</div>
-                  <div className="text-[10px] text-navy/40 mt-2 font-bold">네이버 공식 인증</div>
+                <div className="bg-navy/5 backdrop-blur-md border border-navy/10 rounded-xl p-3 sm:p-5 text-center group hover:bg-navy/10 transition-all hover:-translate-y-1 duration-300 cursor-default overflow-hidden">
+                  <div className="text-[9px] sm:text-xs font-black text-navy/30 mb-1 sm:mb-2 tracking-widest">AUTHORITY</div>
+                  <div className="text-lg sm:text-3xl lg:text-4xl font-black text-navy group-hover:scale-110 transition-transform leading-tight">GRAND</div>
+                  <div className="text-[9px] sm:text-[10px] text-navy/40 mt-1 sm:mt-2 font-bold">공식 인증</div>
                 </div>
               </div>
             </div>
