@@ -90,15 +90,32 @@ export function PortfolioGrid({ portfolios, title, subtitle }: PortfolioGridProp
           </motion.div>
         )}
 
-        {/* 통합 안내 문구 */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
+        {/* 통합 안내 배너 */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-navy/45 text-sm font-semibold text-center mb-14"
+          transition={{ duration: 0.6 }}
+          className="mb-16 lg:mb-20"
         >
-          이전 소속된 직장 및 현재 준앤준솔루션 픽셀로그에서 진행 중인 프로젝트를 통합한 포트폴리오입니다.
-        </motion.p>
+          <div className="relative bg-navy rounded-3xl px-10 py-10 overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-gold rounded-l-3xl" />
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 text-white/[0.04] font-black italic text-[80px] lg:text-[110px] uppercase leading-none select-none pointer-events-none">
+              PORTFOLIO
+            </div>
+            <div className="relative pl-6">
+              <span className="text-gold text-xs font-black tracking-[0.35em] uppercase block mb-3">
+                INTEGRATED WORKS
+              </span>
+              <h2 className="text-white font-black italic text-3xl lg:text-4xl uppercase tracking-tight leading-tight mb-3">
+                통합 포트폴리오
+              </h2>
+              <p className="text-white/50 font-bold text-sm">
+                이전 소속된 직장 및 현재 준앤준솔루션 픽셀로그에서 진행 중인 프로젝트를 통합한 포트폴리오입니다.
+              </p>
+            </div>
+          </div>
+        </motion.div>
 
         {portfolios.length === 0 ? (
           <div className="text-center py-24 bg-navy/5 rounded-3xl border border-navy/10">
