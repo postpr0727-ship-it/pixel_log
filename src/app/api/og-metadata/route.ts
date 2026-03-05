@@ -4,6 +4,45 @@ import { auth } from '@/auth';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'postpr0727@gmail.com';
 
+// YouTube URL에서 Video ID 추출
+function extractYouTubeId(url: string): string | null {
+  const patterns = [
+    /youtu\.be\/([^?&/#]+)/,
+    /youtube\.com\/watch\?v=([^?&/#]+)/,
+    /youtube\.com\/embed\/([^?&/#]+)/,
+    /youtube\.com\/shorts\/([^?&/#]+)/,
+  ];
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+async function fetchYouTubeMetadata(url: string) {
+  const videoId = extractYouTubeId(url);
+  if (!videoId) return null;
+
+  // YouTube oEmbed API (API 키 불필요, 공식 무료 API)
+  const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
+  const res = await fetch(oembedUrl, { signal: AbortSignal.timeout(10000) });
+  if (!res.ok) return null;
+
+  const data = await res.json();
+
+  // maxresdefault 썸네일 시도 → 없으면 hqdefault 사용
+  const maxRes = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const hqDefault = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  const thumbCheck = await fetch(maxRes, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
+  const thumbnail_url = thumbCheck.ok ? maxRes : hqDefault;
+
+  return {
+    title: data.title || '',
+    description: data.author_name ? `유튜브 채널: ${data.author_name}` : '',
+    thumbnail_url,
+  };
+}
+
 function parseNaverBlogUrl(url: string): { blogId: string; logNo: string } | null {
   // https://blog.naver.com/BLOGID/LOGNO
   const match = url.match(/blog\.naver\.com\/([^/?]+)\/(\d+)/);
@@ -116,13 +155,20 @@ export async function POST(request: NextRequest) {
 
     let metadata;
 
-    // 네이버 블로그 전용 처리
-    const naverInfo = parseNaverBlogUrl(url);
-    if (naverInfo) {
-      metadata = await fetchNaverBlogMetadata(naverInfo.blogId, naverInfo.logNo);
+    // 1. YouTube 전용 처리 (oEmbed API)
+    if (url.includes('youtube.com') || url.includes('youtu.be')) {
+      metadata = await fetchYouTubeMetadata(url);
     }
 
-    // 일반 사이트 또는 네이버에서 데이터를 못 가져온 경우
+    // 2. 네이버 블로그 전용 처리
+    if (!metadata || !metadata.title) {
+      const naverInfo = parseNaverBlogUrl(url);
+      if (naverInfo) {
+        metadata = await fetchNaverBlogMetadata(naverInfo.blogId, naverInfo.logNo);
+      }
+    }
+
+    // 3. 일반 사이트
     if (!metadata || !metadata.title) {
       metadata = await fetchGenericMetadata(url);
     }
