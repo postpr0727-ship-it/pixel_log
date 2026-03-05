@@ -343,7 +343,10 @@ function FullFormContent({
                 <div className="relative w-14 h-10 rounded overflow-hidden border border-border bg-slate-100 flex-shrink-0">
                   <Image src={url} alt={`image-${idx}`} fill className="object-cover" sizes="56px" />
                 </div>
-                <span className="flex-1 text-xs text-muted-foreground truncate font-mono">{url}</span>
+                <span className="flex-1 text-xs text-muted-foreground truncate">
+                  이미지 {idx + 1}
+                  <span className="ml-1 text-muted-foreground/50 font-mono">{url.split('/').pop()}</span>
+                </span>
                 <Button
                   type="button"
                   variant="ghost"
