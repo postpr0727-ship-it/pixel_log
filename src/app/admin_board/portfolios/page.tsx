@@ -186,31 +186,6 @@ function LinkOnlyFormContent({
         />
       </div>
 
-      {/* 소속 */}
-      <div>
-        <Label>소속</Label>
-        <div className="flex gap-2 mt-1">
-          {[
-            { value: 'PIXEL-LOG', label: 'PIXEL-LOG' },
-            { value: '이전 소속 직장', label: '이전 소속 직장' },
-            { value: '', label: '구분 없음' },
-          ].map(({ value, label }) => (
-            <button
-              key={label}
-              type="button"
-              onClick={() => setFormData({ ...formData, affiliation: value })}
-              className={`px-3 py-1.5 text-sm font-bold rounded-lg border transition-colors ${
-                formData.affiliation === value
-                  ? 'bg-navy text-white border-navy'
-                  : 'border-border text-navy/60 hover:border-navy/40'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* 프로젝트 날짜 */}
       <div>
         <Label>프로젝트 날짜</Label>
@@ -293,31 +268,6 @@ function FullFormContent({
             placeholder="클라이언트명"
             className="mt-1"
           />
-        </div>
-      </div>
-
-      {/* 소속 */}
-      <div>
-        <Label>소속</Label>
-        <div className="flex gap-2 mt-1">
-          {[
-            { value: 'PIXEL-LOG', label: 'PIXEL-LOG' },
-            { value: '이전 소속 직장', label: '이전 소속 직장' },
-            { value: '', label: '구분 없음' },
-          ].map(({ value, label }) => (
-            <button
-              key={label}
-              type="button"
-              onClick={() => setFormData({ ...formData, affiliation: value })}
-              className={`px-3 py-1.5 text-sm font-bold rounded-lg border transition-colors ${
-                formData.affiliation === value
-                  ? 'bg-navy text-white border-navy'
-                  : 'border-border text-navy/60 hover:border-navy/40'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
         </div>
       </div>
 
