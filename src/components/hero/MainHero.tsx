@@ -60,9 +60,9 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Crafted with Obsession,
+              We Make Your Brand
               <br />
-              <span className="italic">Built with Purpose.</span>
+              <span className="italic">Impossible to Ignore.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -72,8 +72,8 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              영감보다 규율에서 위대한 작업이 탄생한다고 믿습니다.
-              모든 픽셀은 하나의 결정이며, 모든 결정은 하나의 이야기입니다.
+              브랜드의 첫인상이 모든 것을 결정합니다.
+              디자인, 개발, 마케팅, 영상까지 — 픽셀로그가 비즈니스 성장의 크리에이티브 파트너가 되어드립니다.
             </motion.p>
 
           </motion.div>
