@@ -6,13 +6,6 @@ import { motion } from 'framer-motion';
 import { PortfolioGrid } from '@/components/portfolio';
 import type { Portfolio, PortfolioCategory } from '@/types';
 
-const PIXEL_LOG_KEYWORDS = ['pixel-log', 'pixel log', 'pixellog', '픽셀로그'];
-function isPixelLog(affiliation?: string): boolean {
-  if (!affiliation) return false;
-  const lower = affiliation.toLowerCase();
-  return PIXEL_LOG_KEYWORDS.some((kw) => lower.includes(kw));
-}
-
 type TabValue = 'all' | 'design' | 'blog' | 'online_ad' | 'dev' | 'video';
 
 const tabs: { label: string; value: TabValue }[] = [
@@ -70,12 +63,6 @@ export function PortfolioFilter({ portfolios }: PortfolioFilterProps) {
           categoryMap[activeTab].includes(p.category as PortfolioCategory)
         );
 
-  // Globally, does this portfolio have both PIXEL-LOG and previous work?
-  // If yes, always show the two-section layout regardless of the active tab filter.
-  const forceTwoSections =
-    portfolios.some((p) => isPixelLog(p.affiliation)) &&
-    portfolios.some((p) => !isPixelLog(p.affiliation));
-
   return (
     <div>
       {/* Tab Bar */}
@@ -107,7 +94,7 @@ export function PortfolioFilter({ portfolios }: PortfolioFilterProps) {
       </div>
 
       {/* Grid */}
-      <PortfolioGrid portfolios={filtered} forceTwoSections={forceTwoSections} />
+      <PortfolioGrid portfolios={filtered} />
     </div>
   );
 }
