@@ -104,8 +104,8 @@ export function ContactForm() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <span className="text-navy/60 text-sm font-black tracking-widest uppercase mb-4 block">
@@ -119,9 +119,8 @@ export function ContactForm() {
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-navy/10"
         >
           <Form {...form}>

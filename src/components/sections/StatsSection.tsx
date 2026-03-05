@@ -199,7 +199,7 @@ function Timeline() {
         <div className="relative grid grid-cols-5 gap-2">
           {MILESTONES.map((m, i) => (
             <motion.div
-              key={m.year}
+              key={`${m.year}-${i}`}
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.65, delay: 0.4 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
