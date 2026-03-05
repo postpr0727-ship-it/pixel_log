@@ -118,6 +118,7 @@ export const portfolioService = {
       .select('*')
       .eq('is_published', true)
       .in('category', categories)
+      .order('project_date', { ascending: false, nullsFirst: false })
       .order('created_at', { ascending: false });
 
     if (error) throw error;
