@@ -42,7 +42,7 @@ export const portfolioService = {
       .from('portfolios')
       .select('*')
       .eq('is_published', true)
-      .order('created_at', { ascending: false });
+      .order('project_date', { ascending: true, nullsFirst: false });
 
     if (category) {
       query = query.eq('category', category);
@@ -69,7 +69,7 @@ export const portfolioService = {
     const { data, error } = await serverClient
       .from('portfolios')
       .select('*')
-      .order('created_at', { ascending: false });
+      .order('project_date', { ascending: true, nullsFirst: false });
 
     if (error) throw error;
     return (data || []) as Portfolio[];
