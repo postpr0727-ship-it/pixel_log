@@ -6,13 +6,12 @@ import { motion } from 'framer-motion';
 import { PortfolioGrid } from '@/components/portfolio';
 import type { Portfolio, PortfolioCategory } from '@/types';
 
-type TabValue = 'all' | 'design' | 'blog' | 'online_ad' | 'dev' | 'video';
+type TabValue = 'all' | 'design' | 'blog' | 'dev' | 'video';
 
 const tabs: { label: string; value: TabValue }[] = [
   { label: '전체', value: 'all' },
   { label: '디자인', value: 'design' },
   { label: '블로그 마케팅', value: 'blog' },
-  { label: '온라인 광고', value: 'online_ad' },
   { label: '웹 개발', value: 'dev' },
   { label: '영상', value: 'video' },
 ];
@@ -21,7 +20,6 @@ const categoryMap: Record<TabValue, PortfolioCategory[]> = {
   all: [],
   design: ['design'],
   blog: ['blog_marketing'],
-  online_ad: ['online_ad'],
   dev: ['dev'],
   video: ['video'],
 };

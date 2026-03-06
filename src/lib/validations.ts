@@ -101,7 +101,6 @@ export const serviceTypeLabels: Record<string, string> = {
 export const portfolioCategoryLabels: Record<string, string> = {
   design: '디자인',
   blog_marketing: '블로그 마케팅',
-  online_ad: '온라인 광고',
   dev: '개발',
   video: '영상 제작'
 };

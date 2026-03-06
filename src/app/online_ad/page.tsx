@@ -2,10 +2,6 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
 import { PhilosophySection, CTASection } from '@/components/sections';
 import { AdServicesSection } from './AdServicesSection';
-import { PortfolioGrid } from '@/components/portfolio';
-import { portfolioService } from '@/lib/supabase';
-
-export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: '온라인 광고',
@@ -30,11 +26,7 @@ const philosophyItems = [
   },
 ];
 
-export default async function OnlineAdPage() {
-  const portfolios = await portfolioService
-    .getByCategories(['online_ad'])
-    .catch(() => []);
-
+export default function OnlineAdPage() {
   return (
     <>
       <PageHero
@@ -50,7 +42,6 @@ export default async function OnlineAdPage() {
         items={philosophyItems}
       />
       <AdServicesSection />
-      <PortfolioGrid portfolios={portfolios} />
       <CTASection />
     </>
   );
