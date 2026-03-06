@@ -65,7 +65,7 @@ export function BlogCardSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="group h-full border-navy/10 hover:border-navy hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white rounded-[2.5rem]">
+              <Card className="group h-full border-navy/10 hover:border-navy hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white rounded-[2.5rem] pt-0">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={blog.thumbnail_url || '/images/placeholder-blog.png'}

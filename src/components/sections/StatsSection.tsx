@@ -162,6 +162,7 @@ function MiniStat({ number, suffix, label, sublabel, delay, locale }: StatCardPr
 // ── Horizontal timeline / milestones ─────────────────────────────────────────
 const MILESTONES = [
   { year: '2023', event: '준앤준솔루션 설립', sub: 'Founded' },
+  { year: '2023', event: '김포다조은병원 통합마케팅 수주', sub: 'Marketing Contract' },
   { year: '2024', event: '네이버 이달의 블로그 선정', sub: 'Blog of the Month' },
   { year: '2024', event: '네이버 올해의 블로그 선정', sub: 'Blog of the Year' },
   { year: '2025', event: 'AI 웹 프로그래밍 도입', sub: 'AI Web Programming' },
@@ -196,7 +197,7 @@ function Timeline() {
         />
 
         {/* Milestone dots + labels */}
-        <div className="relative grid grid-cols-5 gap-2">
+        <div className="relative grid grid-cols-6 gap-2">
           {MILESTONES.map((m, i) => (
             <motion.div
               key={`${m.year}-${i}`}
