@@ -67,13 +67,17 @@ export function BlogCardSection() {
             >
               <Card className="group h-full border-navy/10 hover:border-navy hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white rounded-[2.5rem] pt-0">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={blog.thumbnail_url || '/images/placeholder-blog.png'}
-                    alt={blog.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+                  {blog.thumbnail_url ? (
+                    <Image
+                      src={blog.thumbnail_url}
+                      alt={blog.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-navy/20 via-navy/40 to-navy" />
+                  )}
                   <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/40 transition-all duration-500" />
                   <div className="absolute top-6 right-6 translate-y-[-10px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     <div className="w-12 h-12 rounded-full bg-gold flex items-center justify-center shadow-2xl">

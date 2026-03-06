@@ -906,13 +906,17 @@ function PortfoliosContent() {
                   const card = (
                     <Card className="overflow-hidden">
                       <div className="relative aspect-[4/3]">
-                        <Image
-                          src={portfolio.thumbnail_url || '/images/placeholder.png'}
-                          alt={portfolio.title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
+                        {portfolio.thumbnail_url ? (
+                          <Image
+                            src={portfolio.thumbnail_url}
+                            alt={portfolio.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 bg-gradient-to-br from-navy/20 to-navy/60" />
+                        )}
                         <div className="absolute top-2 right-2 flex gap-1">
                           <Badge
                             variant={portfolio.is_published ? 'default' : 'secondary'}

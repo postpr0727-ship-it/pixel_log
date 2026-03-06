@@ -44,13 +44,17 @@ export function PortfolioModal({ portfolio, isOpen, onClose }: PortfolioModalPro
               transition={{ duration: 0.3 }}
               className="absolute inset-0"
             >
-              <Image
-                src={allImages[currentImageIndex] || '/images/placeholder.png'}
-                alt={`${portfolio.title} - ${currentImageIndex + 1}`}
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 95vw, 896px"
-              />
+              {allImages[currentImageIndex] ? (
+                <Image
+                  src={allImages[currentImageIndex]}
+                  alt={`${portfolio.title} - ${currentImageIndex + 1}`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 95vw, 896px"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-navy/30 to-navy" />
+              )}
             </motion.div>
           </AnimatePresence>
 
