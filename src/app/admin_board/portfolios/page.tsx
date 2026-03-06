@@ -618,16 +618,30 @@ function PortfoliosContent() {
   };
 
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 8 } }));
-  const isDndEnabled = categoryFilter === 'all' && searchTerm === '';
+  const isDndEnabled = searchTerm === '';
 
   const handleDragEnd = async (event: DragEndEvent) => {
     const { active, over } = event;
     if (!over || active.id === over.id) return;
-    const oldIndex = portfolios.findIndex((p) => p.id === active.id);
-    const newIndex = portfolios.findIndex((p) => p.id === over.id);
-    const reordered = arrayMove(portfolios, oldIndex, newIndex);
-    setPortfolios(reordered);
-    const order = reordered.map((p, i) => ({ id: p.id, display_order: i + 1 }));
+
+    // Reorder within the currently visible (filtered) list
+    const oldIndex = filteredPortfolios.findIndex((p) => p.id === active.id);
+    const newIndex = filteredPortfolios.findIndex((p) => p.id === over.id);
+    const reorderedFiltered = arrayMove(filteredPortfolios, oldIndex, newIndex);
+
+    // Rebuild full portfolios array: slot reordered filtered items back into their original positions
+    const filteredIds = new Set(filteredPortfolios.map((p) => p.id));
+    const filteredSlots = portfolios.reduce<number[]>((acc, p, i) => {
+      if (filteredIds.has(p.id)) acc.push(i);
+      return acc;
+    }, []);
+    const newPortfolios = [...portfolios];
+    filteredSlots.forEach((slotIdx, i) => {
+      newPortfolios[slotIdx] = reorderedFiltered[i];
+    });
+
+    setPortfolios(newPortfolios);
+    const order = newPortfolios.map((p, i) => ({ id: p.id, display_order: i + 1 }));
     await fetch('/api/portfolios', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -882,11 +896,11 @@ function PortfoliosContent() {
         <>
           {!isDndEnabled && (
             <p className="text-xs text-muted-foreground mb-3">
-              순서 변경은 검색·필터 해제 후 전체 보기에서 가능합니다.
+              순서 변경은 검색어를 지운 후 가능합니다.
             </p>
           )}
           <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-            <SortableContext items={portfolios.map((p) => p.id)} strategy={rectSortingStrategy}>
+            <SortableContext items={filteredPortfolios.map((p) => p.id)} strategy={rectSortingStrategy}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredPortfolios.map((portfolio, index) => {
                   const card = (
