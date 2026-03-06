@@ -14,7 +14,23 @@ import {
   X,
   ImagePlus,
   Upload,
+  GripVertical,
 } from 'lucide-react';
+import {
+  DndContext,
+  closestCenter,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+} from '@dnd-kit/core';
+import {
+  SortableContext,
+  rectSortingStrategy,
+  useSortable,
+  arrayMove,
+} from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -464,6 +480,27 @@ export default function PortfoliosPage() {
   );
 }
 
+// ===== Sortable Card =====
+function SortableCard({ id, children }: { id: string; children: React.ReactNode }) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id });
+  return (
+    <div
+      ref={setNodeRef}
+      style={{ transform: CSS.Transform.toString(transform), transition }}
+      className={`relative ${isDragging ? 'opacity-50 z-50' : ''}`}
+    >
+      <div
+        {...attributes}
+        {...listeners}
+        className="absolute top-2 left-2 z-10 cursor-grab active:cursor-grabbing p-1 rounded bg-black/30 text-white/70 hover:text-white hover:bg-black/50"
+      >
+        <GripVertical className="h-4 w-4" />
+      </div>
+      {children}
+    </div>
+  );
+}
+
 function PortfoliosContent() {
   const searchParams = useSearchParams();
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
@@ -578,6 +615,24 @@ function PortfoliosContent() {
       setUploading(null);
       e.target.value = '';
     }
+  };
+
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 8 } }));
+  const isDndEnabled = categoryFilter === 'all' && searchTerm === '';
+
+  const handleDragEnd = async (event: DragEndEvent) => {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+    const oldIndex = portfolios.findIndex((p) => p.id === active.id);
+    const newIndex = portfolios.findIndex((p) => p.id === over.id);
+    const reordered = arrayMove(portfolios, oldIndex, newIndex);
+    setPortfolios(reordered);
+    const order = reordered.map((p, i) => ({ id: p.id, display_order: i + 1 }));
+    await fetch('/api/portfolios', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ order }),
+    });
   };
 
   useEffect(() => {
@@ -824,60 +879,81 @@ function PortfoliosContent() {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPortfolios.map((portfolio, index) => (
-            <motion.div
-              key={portfolio.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
-            >
-              <Card className="overflow-hidden">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={portfolio.thumbnail_url || '/images/placeholder.png'}
-                    alt={portfolio.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute top-2 right-2 flex gap-1">
-                    <Badge
-                      variant={portfolio.is_published ? 'default' : 'secondary'}
-                      className={portfolio.is_published ? 'bg-green-500' : ''}
+        <>
+          {!isDndEnabled && (
+            <p className="text-xs text-muted-foreground mb-3">
+              순서 변경은 검색·필터 해제 후 전체 보기에서 가능합니다.
+            </p>
+          )}
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+            <SortableContext items={portfolios.map((p) => p.id)} strategy={rectSortingStrategy}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredPortfolios.map((portfolio, index) => {
+                  const card = (
+                    <Card className="overflow-hidden">
+                      <div className="relative aspect-[4/3]">
+                        <Image
+                          src={portfolio.thumbnail_url || '/images/placeholder.png'}
+                          alt={portfolio.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        <div className="absolute top-2 right-2 flex gap-1">
+                          <Badge
+                            variant={portfolio.is_published ? 'default' : 'secondary'}
+                            className={portfolio.is_published ? 'bg-green-500' : ''}
+                          >
+                            {portfolio.is_published ? '공개' : '비공개'}
+                          </Badge>
+                        </div>
+                      </div>
+                      <CardContent className="p-4">
+                        <div className="mb-2">
+                          <h3 className="font-bold text-navy line-clamp-1">{portfolio.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {portfolioCategoryLabels[portfolio.category]}
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 mt-4">
+                          <Button variant="outline" size="sm" onClick={() => togglePublish(portfolio)}>
+                            {portfolio.is_published ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => openForm(portfolio)}>
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setDeleteTarget({ id: portfolio.id, title: portfolio.title })}
+                            className="text-red-500 hover:text-red-600"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+
+                  return isDndEnabled ? (
+                    <SortableCard key={portfolio.id} id={portfolio.id}>
+                      {card}
+                    </SortableCard>
+                  ) : (
+                    <motion.div
+                      key={portfolio.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
                     >
-                      {portfolio.is_published ? '공개' : '비공개'}
-                    </Badge>
-                  </div>
-                </div>
-                <CardContent className="p-4">
-                  <div className="mb-2">
-                    <h3 className="font-bold text-navy line-clamp-1">{portfolio.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {portfolioCategoryLabels[portfolio.category]}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 mt-4">
-                    <Button variant="outline" size="sm" onClick={() => togglePublish(portfolio)}>
-                      {portfolio.is_published ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => openForm(portfolio)}>
-                      <Edit className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setDeleteTarget({ id: portfolio.id, title: portfolio.title })}
-                      className="text-red-500 hover:text-red-600"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                      {card}
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </SortableContext>
+          </DndContext>
+        </>
       )}
 
       {/* Form Dialog */}

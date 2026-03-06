@@ -1,0 +1,2 @@
+[     451ms] [WARNING] Image with src "/images/gtq-logo.svg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297

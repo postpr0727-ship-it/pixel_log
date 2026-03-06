@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { portfolioService } from '@/lib/supabase';
+import { portfolioService, createServerClient } from '@/lib/supabase';
 import { portfolioFormSchema } from '@/lib/validations';
 import { auth } from '@/auth';
 
@@ -22,6 +22,35 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching portfolios:', { message: error.message, stack: error.stack });
     return NextResponse.json(
       { error: 'Failed to fetch portfolios', details: error.message },
+      { status: 500 }
+    );
+  }
+}
+
+// Admin PATCH - batch reorder portfolios
+export async function PATCH(request: NextRequest) {
+  try {
+    const session = await auth();
+    if (!session?.user?.email || session.user.email !== ADMIN_EMAIL) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const body = await request.json();
+    const order: { id: string; display_order: number }[] = body.order;
+
+    if (!Array.isArray(order)) {
+      return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
+    }
+
+    const supabase = createServerClient();
+    for (const { id, display_order } of order) {
+      await supabase.from('portfolios').update({ display_order }).eq('id', id);
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (error: any) {
+    return NextResponse.json(
+      { error: 'Failed to reorder portfolios', details: error.message },
       { status: 500 }
     );
   }

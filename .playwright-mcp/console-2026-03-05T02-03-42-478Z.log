@@ -1,0 +1,2 @@
+[   42152ms] [WARNING] Image with src "https://blogthumb.pstatic.net/MjAyNjAyMjZfMjA5/MDAxNzcyMDY5NTc3NDg2.131zlFNJv1T7HCbKCouC9vn1V64b7dVRRnYgAqFC-BQg.fs2os3t1wY6_EJZ8B5QVq38skGguwddtpueeACnvCYIg.PNG/1.png?type=s3" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
