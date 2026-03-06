@@ -62,7 +62,7 @@ export function MainHero() {
             >
               We Make Your Brand
               <br />
-              <span className="italic">Impossible to Ignore.</span>
+              <span className="italic text-gold">Impossible to Ignore.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -72,9 +72,9 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              준앤준솔루션이 선보이는 크리에이티브 레이블, 픽셀로그.<br />
-              브랜드가 단순히 보이는 것을 넘어 기억되고 선택받을 수 있도록 —<br />
-              디자인, 개발, 마케팅, 영상의 모든 접점을 정교하게 설계합니다.
+              준앤준솔루션이 선보이는 크리에이티브 레이블, <span className="text-gold font-black">픽셀로그</span>.<br />
+              브랜드가 단순히 보이는 것을 넘어 <span className="text-gold font-black">기억되고 선택받을</span> 수 있도록 —<br />
+              <span className="text-gold font-black">디자인, 개발, 마케팅, 영상</span>의 모든 접점을 정교하게 설계합니다.
             </motion.p>
 
           </motion.div>
