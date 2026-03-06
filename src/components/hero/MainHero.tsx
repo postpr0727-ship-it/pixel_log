@@ -67,12 +67,14 @@ export function MainHero() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-white/85 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-medium break-keep drop-shadow-sm"
+              className="text-white/70 text-base md:text-lg max-w-xl mb-10 leading-relaxed font-medium break-keep drop-shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              준앤준솔루션이 선보이는 크리에이티브 레이블, <span className="text-gold font-black">픽셀로그</span>.<br />
+              <span className="block text-white font-black text-xl md:text-2xl tracking-tight mb-3">
+                준앤준솔루션이 선보이는 크리에이티브 레이블, <span className="text-gold">픽셀로그</span>.
+              </span>
               브랜드가 단순히 보이는 것을 넘어 <span className="text-gold font-black">기억되고 선택받을</span> 수 있도록 —<br />
               <span className="text-gold font-black">디자인, 개발, 마케팅, 영상</span>의 모든 접점을 정교하게 설계합니다.
             </motion.p>
