@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
 import { PhilosophySection, CTASection } from '@/components/sections';
 import { AdServicesSection } from './AdServicesSection';
+import { CertSection } from './CertSection';
 
 export const metadata: Metadata = {
   title: '온라인 광고',
@@ -35,6 +36,7 @@ export default function OnlineAdPage() {
         description="효과적인 온라인 광고로 타겟 고객에게 정확하게 도달합니다."
         breadcrumbs={[{ label: '온라인 광고' }]}
       />
+      <CertSection />
       <PhilosophySection
         title="온라인 광고 철학"
         subtitle="OUR APPROACH"
