@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ['@react-pdf/renderer'],
+  turbopack: {},
   async redirects() {
     return [
       { source: '/design/print',    destination: '/design', permanent: true },

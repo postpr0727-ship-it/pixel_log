@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
+import fs from 'fs';
 import {
   Document,
   Page,
@@ -12,13 +13,21 @@ import {
 } from '@react-pdf/renderer';
 import React from 'react';
 
-Font.register({
-  family: 'Nanum',
-  fonts: [
-    { src: path.join(process.cwd(), 'public/fonts/NanumGothic-Regular.ttf'), fontWeight: 400 },
-    { src: path.join(process.cwd(), 'public/fonts/NanumGothic-Bold.ttf'), fontWeight: 700 },
-  ],
-});
+let fontRegistered = false;
+function ensureFont() {
+  if (fontRegistered) return;
+  const fontPath = path.join(process.cwd(), 'public', 'fonts', 'NanumGothic-Regular.ttf');
+  const buf = fs.readFileSync(fontPath);
+  const dataUri = `data:font/truetype;base64,${buf.toString('base64')}`;
+  Font.register({
+    family: 'Nanum',
+    fonts: [
+      { src: dataUri, fontWeight: 400 },
+      { src: dataUri, fontWeight: 700 },
+    ],
+  });
+  fontRegistered = true;
+}
 
 const C = {
   navy: '#0B1222',
@@ -321,6 +330,7 @@ function PortfolioDocument() {
 
 export async function GET() {
   try {
+    ensureFont();
     const buffer = await renderToBuffer(React.createElement(PortfolioDocument));
     return new NextResponse(buffer as unknown as BodyInit, {
       status: 200,
@@ -331,7 +341,8 @@ export async function GET() {
       },
     });
   } catch (err) {
-    console.error('PDF generation error:', err);
-    return NextResponse.json({ error: 'PDF 생성 실패' }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('PDF generation error:', message);
+    return NextResponse.json({ error: 'PDF 생성 실패', details: message }, { status: 500 });
   }
 }
