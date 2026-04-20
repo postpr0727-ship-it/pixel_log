@@ -33,7 +33,13 @@ const s = StyleSheet.create({
     paddingVertical: 60,
   },
 
-  logo: { width: 140, height: 42, objectFit: 'contain', marginBottom: 48 },
+  logo: { width: 140, height: 42, objectFit: 'contain', marginBottom: 24 },
+
+  nameBadge: {
+    borderWidth: 1, borderColor: '#CBD5E0', borderStyle: 'solid',
+    borderRadius: 20, paddingHorizontal: 14, paddingVertical: 5, marginBottom: 28,
+  },
+  nameBadgeText: { fontSize: 9, color: '#718096', letterSpacing: 1 },
 
   // 제목
   title: {
@@ -114,6 +120,11 @@ function ShortcutPDF() {
 
         // 로고
         React.createElement(Image, { src: logoSrc, style: s.logo }),
+
+        // 이름 배지
+        React.createElement(View, { style: s.nameBadge },
+          React.createElement(Text, { style: s.nameBadgeText }, '김경훈 포트폴리오'),
+        ),
 
         // 제목
         React.createElement(Text, { style: s.title }, '디자인, 개발, 광고, 영상\n모든 것을 한 곳에서.'),
