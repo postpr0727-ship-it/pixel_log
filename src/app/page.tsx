@@ -1,5 +1,5 @@
 import { MainHero } from '@/components/hero';
-import { EditorialServicesSection, StatsSection, CTASection } from '@/components/sections';
+import { EditorialServicesSection, StatsSection } from '@/components/sections';
 
 export default async function HomePage() {
   return (
@@ -9,7 +9,6 @@ export default async function HomePage() {
         <EditorialServicesSection />
       </div>
       <StatsSection />
-      <CTASection />
     </>
   );
 }

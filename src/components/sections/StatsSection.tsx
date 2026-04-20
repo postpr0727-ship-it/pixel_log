@@ -161,7 +161,7 @@ function MiniStat({ number, suffix, label, sublabel, delay, locale }: StatCardPr
 
 // ── Horizontal timeline / milestones ─────────────────────────────────────────
 const MILESTONES = [
-  { year: '2023', event: '준앤준솔루션 설립', sub: 'Founded' },
+  { year: '2023', event: 'PIXEL-LOG 설립', sub: 'Founded' },
   { year: '2023', event: '김포다조은병원 통합마케팅 수주', sub: 'Marketing Contract' },
   { year: '2024', event: '네이버 이달의 블로그 선정', sub: 'Blog of the Month' },
   { year: '2024', event: '네이버 올해의 블로그 선정', sub: 'Blog of the Year' },

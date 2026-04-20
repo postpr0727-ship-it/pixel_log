@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const services = [
   { name: '디자인 서비스', href: '/design' },
@@ -12,7 +12,6 @@ const services = [
 
 const quickLinks = [
   { name: 'About', href: '/about' },
-  { name: '문의하기', href: '/contact' },
 ];
 
 export function Footer() {
@@ -40,22 +39,6 @@ export function Footer() {
               디자인부터 개발, 마케팅까지 원스톱 솔루션을 제공합니다.
             </p>
 
-            <div className="mb-6 bg-white/10 p-4 rounded-2xl border border-white/20">
-              <p className="text-gold text-sm font-bold mb-1">Business Info</p>
-              <a
-                href="https://jjsoultion.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-white/80 text-sm font-bold mb-1 hover:text-gold transition-colors"
-              >
-                준앤준솔루션 (Jun & Jun Solution)
-                <ExternalLink className="h-3 w-3" />
-              </a>
-              <div className="text-white/60 text-xs leading-relaxed space-y-1">
-                <p>PIXEL-LOG는 준앤준솔루션의 전문 디자인/개발 브랜드입니다.</p>
-                <p>계약 및 세금계산서 발행은 준앤준솔루션 명의로 진행됩니다.</p>
-              </div>
-            </div>
             <div className="flex items-center gap-4">
               <a
                 href="https://blog.naver.com/curator-"
@@ -65,15 +48,6 @@ export function Footer() {
                 aria-label="네이버 블로그"
               >
                 <span className="text-white text-sm font-black">N</span>
-              </a>
-              <a
-                href="https://jjsoultion.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="준앤준솔루션 홈페이지"
-              >
-                <span className="text-white text-xs font-black">JJ</span>
               </a>
             </div>
           </div>
@@ -130,15 +104,10 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Business Info */}
-        <div className="py-4 border-t border-white/10 text-white/35 text-xs leading-relaxed">
-          <p>준앤준솔루션  |  대표 장수진  |  사업자등록번호 420-87-02751  |  서울특별시 서초구 서초대로 77길 39, 12층 101호(서초동)</p>
-        </div>
-
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm font-medium">
-            © 2026 준앤준솔루션. All rights reserved.
+            © 2026 PIXEL-LOG. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-white/40 hover:text-white text-sm transition-colors font-medium">

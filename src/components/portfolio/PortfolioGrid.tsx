@@ -111,7 +111,7 @@ export function PortfolioGrid({ portfolios, title, subtitle }: PortfolioGridProp
                 통합 포트폴리오
               </h2>
               <p className="text-white/50 font-bold text-sm">
-                이전 소속된 직장 및 현재 준앤준솔루션 픽셀로그에서 진행 중인 프로젝트를 통합한 포트폴리오입니다.
+                이전 소속된 직장 및 PIXEL-LOG에서 진행한 프로젝트를 통합한 포트폴리오입니다.
               </p>
             </div>
           </div>

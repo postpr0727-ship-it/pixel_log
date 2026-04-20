@@ -48,7 +48,7 @@ export function MainHero() {
             >
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold text-xs font-black tracking-widest uppercase">
-                준앤준솔루션 · Creative Label
+                PIXEL-LOG · Creative Label
               </span>
             </motion.div>
 
@@ -73,7 +73,7 @@ export function MainHero() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <span className="block text-white font-black text-lg md:text-2xl tracking-tight mb-3">
-                준앤준솔루션이 선보이는<br className="block md:hidden" /> 크리에이티브 레이블, <span className="text-gold">픽셀로그</span>.
+                브랜드를 완성하는<br className="block md:hidden" /> 크리에이티브 레이블, <span className="text-gold">픽셀로그</span>.
               </span>
               브랜드가 단순히 보이는 것을 넘어 <span className="text-gold font-black">기억되고 선택받을</span> 수 있도록 —<br className="hidden md:block" />{' '}
               <span className="text-gold font-black">디자인, 개발, 마케팅, 영상</span>의 모든 접점을 정교하게 설계합니다.

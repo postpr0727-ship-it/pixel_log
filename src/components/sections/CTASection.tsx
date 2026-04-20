@@ -56,11 +56,6 @@ export function CTASection() {
             </Button>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-white/10">
-            <p className="text-white/40 text-sm italic font-medium">
-              PIXEL-LOG는 준앤준솔루션의 디자인 전문 레이블입니다.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

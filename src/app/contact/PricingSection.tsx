@@ -126,10 +126,6 @@ export function PricingSection() {
           transition={{ delay: 0.2 }}
           className="text-center"
         >
-          <p className="text-navy/40 text-sm font-medium">
-            PIXEL-LOG는 준앤준솔루션의 전문 디자인/개발 브랜드입니다.
-            <span className="block mt-1 text-navy/30 text-xs">(계약 및 세금계산서 발행: 준앤준솔루션)</span>
-          </p>
         </motion.div>
 
       </div>

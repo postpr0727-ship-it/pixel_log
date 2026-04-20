@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
-import { PhilosophySection, CTASection } from '@/components/sections';
+import { PhilosophySection } from '@/components/sections';
 import { AdServicesSection } from './AdServicesSection';
 import { CertSection } from './CertSection';
 
@@ -44,7 +44,6 @@ export default function OnlineAdPage() {
         items={philosophyItems}
       />
       <AdServicesSection />
-      <CTASection />
     </>
   );
 }
