@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/online_ad',
     '/dev',
     '/video',
-    '/contact',
   ];
 
   return routes.map((route) => ({

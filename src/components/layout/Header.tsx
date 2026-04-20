@@ -21,7 +21,6 @@ const navigation = [
   { name: '온라인 광고', href: '/online_ad' },
   { name: '웹 개발', href: '/dev' },
   { name: '영상 제작', href: '/video' },
-  { name: '문의하기', href: '/contact' },
 ];
 
 export function Header() {
