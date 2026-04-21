@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { PortfolioDownloadButton } from '@/components/PortfolioDownloadButton';
 
 export function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -20,7 +19,6 @@ export function ConditionalLayout({ children }: { children: React.ReactNode }) {
       <Header />
       <main>{children}</main>
       <Footer />
-      <PortfolioDownloadButton />
     </>
   );
 }
