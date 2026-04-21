@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { PageHero } from '@/components/hero';
 import { AboutContent } from './AboutContent';
-import { BlogCardSection } from './BlogCardSection';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,7 +19,6 @@ export default function AboutPage() {
         breadcrumbs={[{ label: 'About' }]}
       />
       <AboutContent />
-      <BlogCardSection />
     </>
   );
 }
