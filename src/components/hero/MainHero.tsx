@@ -60,9 +60,9 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              15년 경력,
+              만들 수 있는 것,
               <br />
-              <span className="italic text-gold">김경훈입니다.</span>
+              <span className="italic text-gold">전부 만들어왔습니다.</span>
             </motion.h1>
 
             {/* Subtitle */}
