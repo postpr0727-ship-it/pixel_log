@@ -40,93 +40,128 @@ export function AboutContent() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ── Story + Photo ─────────────────────────────────────────── */}
+        {/* ── Story ───────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-24 lg:mb-32"
+          className="mb-16 lg:mb-20 max-w-2xl"
         >
-          {/* Text */}
-          <div>
-            <span className="text-navy/60 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
-              ABOUT ME
-            </span>
-            <h2 className="section-title text-navy mt-2 mb-2 font-black italic tracking-tighter uppercase leading-none">
-              김경훈
-            </h2>
-            <p className="text-gold font-black text-lg tracking-wide mb-8 uppercase">
-              Designer · Developer · Marketer · Creator
+          <span className="text-navy/60 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
+            ABOUT ME
+          </span>
+          <h2 className="section-title text-navy mt-2 mb-2 font-black italic tracking-tighter uppercase leading-none">
+            김경훈
+          </h2>
+          <p className="text-gold font-black text-lg tracking-wide mb-8 uppercase">
+            Designer · Developer · Marketer · Creator
+          </p>
+          <div className="space-y-5 text-navy/70 leading-relaxed font-bold italic text-lg">
+            <p>
+              PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.
+              디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아
+              작업 하나하나를 기록해온 개인 포트폴리오입니다.
             </p>
-            <div className="space-y-6 text-navy/70 leading-relaxed font-bold italic text-lg">
-              <p>
-                PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.<br className="hidden lg:block" />
-                디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아<br className="hidden lg:block" />
-                작업 하나하나를 기록해온 개인 포트폴리오입니다.
-              </p>
-              <p>
-                브랜드 디자인부터 웹 개발, 온라인 광고, 블로그 마케팅, 영상 제작까지
-                다양한 분야의 실무 경험을 쌓아왔습니다.
-              </p>
-              <p>
-                한 사람이 기획, 디자인, 개발, 마케팅을 모두 다룰 수 있다는 것,
-                그것이 제 가장 큰 강점입니다.
+            <p>
+              한 사람이 기획, 디자인, 개발, 마케팅을 모두 다룰 수 있다는 것,
+              그것이 제 가장 큰 강점입니다.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* ── Editorial Photo Card ─────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl mb-24 lg:mb-32"
+          style={{ aspectRatio: '16/7' }}
+        >
+          {/* Photo */}
+          <Image
+            src="/images/profile2.png"
+            alt="김경훈"
+            fill
+            className="object-cover object-right-top"
+            priority
+          />
+
+          {/* Right-side vignette — keeps person visible */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#08101F] via-[#08101F]/60 to-transparent" />
+          {/* Bottom vignette */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#08101F]/80 via-transparent to-transparent" />
+
+          {/* Gold top accent line */}
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold via-gold/60 to-transparent" />
+
+          {/* Left content overlay */}
+          <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
+            {/* Top row */}
+            <div className="flex items-center justify-between">
+              <span className="text-gold/80 text-[10px] font-black tracking-[0.4em] uppercase">
+                Portfolio · 2025
+              </span>
+              <span className="text-white/30 text-[10px] font-black tracking-[0.3em] uppercase hidden lg:block">
+                PIXEL-LOG
+              </span>
+            </div>
+
+            {/* Center — name block */}
+            <div className="max-w-md">
+              {/* Vertical skill tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['Design', 'Development', 'Marketing', 'Video'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] font-black tracking-widest uppercase text-white/50 border border-white/15 px-3 py-1 rounded-full backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 className="text-white font-black tracking-tighter leading-none mb-1"
+                  style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}>
+                김경훈
+              </h3>
+              <p className="text-gold font-black text-sm lg:text-base tracking-[0.2em] uppercase mt-2">
+                Kim Kyung-Hun
               </p>
             </div>
 
-            {/* Cert badges */}
-            <div className="flex flex-wrap gap-2 mt-8">
-              {certs.map((c) => (
-                <span
-                  key={c.label}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy/5 border border-navy/15 text-xs font-black text-navy/70 tracking-wide"
+            {/* Bottom row */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              {/* Cert badges */}
+              <div className="flex flex-wrap gap-2">
+                {certs.map((c) => (
+                  <span
+                    key={c.label}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] font-black text-white/80 tracking-wide"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    {c.label}
+                  </span>
+                ))}
+              </div>
+
+              {/* Stat + email */}
+              <div className="flex items-center gap-4">
+                <div className="text-right">
+                  <p className="text-gold font-black text-2xl lg:text-3xl leading-none">15+</p>
+                  <p className="text-white/40 text-[10px] font-black tracking-widest uppercase">Years</p>
+                </div>
+                <div className="w-px h-8 bg-white/20" />
+                <a
+                  href="mailto:postpr0727@gmail.com"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-black hover:bg-white/20 transition-colors"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
-                  {c.label}
-                  <span className="text-navy/40 font-medium">· {c.org}</span>
-                </span>
-              ))}
-            </div>
-
-            {/* Contact strip */}
-            <div className="flex flex-wrap gap-3 mt-8">
-              <a
-                href="mailto:postpr0727@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-navy text-white text-sm font-black hover:bg-navy/80 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                postpr0727@gmail.com
-              </a>
+                  <Mail className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">postpr0727@gmail.com</span>
+                  <span className="sm:hidden">Contact</span>
+                </a>
+              </div>
             </div>
           </div>
-
-          {/* Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="relative flex justify-center lg:justify-end"
-          >
-            <div className="relative">
-              {/* Decorative bg */}
-              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-navy/10 to-gold/10 translate-x-4 translate-y-4 -z-10" />
-              <div className="w-72 h-80 lg:w-80 lg:h-[420px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                <Image
-                  src="/images/profile.png"
-                  alt="김경훈"
-                  width={320}
-                  height={420}
-                  className="w-full h-full object-cover object-top"
-                  priority
-                />
-              </div>
-              {/* Name tag */}
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2.5 rounded-full shadow-xl whitespace-nowrap">
-                <span className="text-sm font-black tracking-wider">김경훈 · PIXEL-LOG</span>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* ── Values ──────────────────────────────────────────────────── */}
