@@ -48,7 +48,7 @@ export function MainHero() {
             >
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold text-xs font-black tracking-widest uppercase">
-                김경훈 · Personal Portfolio
+                Designer · Developer · Marketer · Creator
               </span>
             </motion.div>
 
@@ -60,7 +60,7 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              안녕하세요,
+              15년 경력,
               <br />
               <span className="italic text-gold">김경훈입니다.</span>
             </motion.h1>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Target, Lightbulb, Users, Zap } from 'lucide-react';
+import { Target, Lightbulb, Users, Zap, Mail, MessageCircle } from 'lucide-react';
 
 const values = [
   {
@@ -27,29 +27,37 @@ const values = [
   },
 ];
 
+const certs = [
+  { label: 'GTQ 1급', org: '한국생산성본부' },
+  { label: '검색광고마케터 1급', org: 'KAIT' },
+  { label: 'AI-PDTQ', org: '한국인공지능협회' },
+];
+
 export function AboutContent() {
   return (
     <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-      {/* Grid Pattern Background */}
       <div className="absolute inset-0 z-0 grid-pattern opacity-[0.05] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Story Section */}
+
+        {/* ── Story + Photo ─────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-24 lg:mb-32"
         >
+          {/* Text */}
           <div>
             <span className="text-navy/60 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
               ABOUT ME
             </span>
-            <h2 className="section-title text-navy mt-2 mb-8 font-black italic tracking-tighter uppercase leading-none">
-              김경훈,
-              <br />
-              픽셀로 기록하다
+            <h2 className="section-title text-navy mt-2 mb-2 font-black italic tracking-tighter uppercase leading-none">
+              김경훈
             </h2>
+            <p className="text-gold font-black text-lg tracking-wide mb-8 uppercase">
+              Designer · Developer · Marketer · Creator
+            </p>
             <div className="space-y-6 text-navy/70 leading-relaxed font-bold italic text-lg">
               <p>
                 PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.<br className="hidden lg:block" />
@@ -65,24 +73,72 @@ export function AboutContent() {
                 그것이 제 가장 큰 강점입니다.
               </p>
             </div>
-          </div>
-          <div className="relative group">
-            <div className="aspect-square rounded-[3rem] overflow-hidden bg-navy flex items-center justify-center shadow-2xl transition-transform duration-700 group-hover:rotate-2">
-              <Image
-                src="/images/logo-white.png"
-                alt="PIXEL-LOG"
-                width={300}
-                height={100}
-                className="w-1/2 h-auto"
-              />
+
+            {/* Cert badges */}
+            <div className="flex flex-wrap gap-2 mt-8">
+              {certs.map((c) => (
+                <span
+                  key={c.label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy/5 border border-navy/15 text-xs font-black text-navy/70 tracking-wide"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                  {c.label}
+                  <span className="text-navy/40 font-medium">· {c.org}</span>
+                </span>
+              ))}
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-8 -right-8 w-48 h-48 bg-navy/5 rounded-[4rem] -z-10 animate-pulse-slow" />
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-navy/10 rounded-[3rem] -z-10 animate-float" />
+
+            {/* Contact strip */}
+            <div className="flex flex-wrap gap-3 mt-8">
+              <a
+                href="mailto:postpr0727@gmail.com"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-navy text-white text-sm font-black hover:bg-navy/80 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                postpr0727@gmail.com
+              </a>
+              <a
+                href="https://pf.kakao.com/_pixellog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#FEE500] text-[#3A1D1D] text-sm font-black hover:opacity-80 transition-opacity"
+              >
+                <MessageCircle className="w-4 h-4" />
+                카카오톡 @pixellog
+              </a>
+            </div>
           </div>
+
+          {/* Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="relative flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              {/* Decorative bg */}
+              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-navy/10 to-gold/10 translate-x-4 translate-y-4 -z-10" />
+              <div className="w-72 h-80 lg:w-80 lg:h-[420px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
+                <Image
+                  src="/images/profile.png"
+                  alt="김경훈"
+                  width={320}
+                  height={420}
+                  className="w-full h-full object-cover object-top"
+                  priority
+                />
+              </div>
+              {/* Name tag */}
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-2.5 rounded-full shadow-xl whitespace-nowrap">
+                <span className="text-sm font-black tracking-wider">김경훈 · PIXEL-LOG</span>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* Values Section */}
+        {/* ── Values ──────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +173,7 @@ export function AboutContent() {
             </motion.div>
           ))}
         </div>
-      </div >
-    </section >
+      </div>
+    </section>
   );
 }

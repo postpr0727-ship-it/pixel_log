@@ -162,10 +162,10 @@ function MiniStat({ number, suffix, label, sublabel, delay, locale }: StatCardPr
 // ── Horizontal timeline / milestones ─────────────────────────────────────────
 const MILESTONES = [
   { year: '2010', event: '실무 시작', sub: 'Career Start' },
-  { year: '2023', event: 'PIXEL-LOG 설립', sub: 'Founded' },
   { year: '2023', event: '김포다조은병원 통합마케팅 프로젝트 진행', sub: 'Marketing Project' },
   { year: '2024', event: '네이버 이달의 블로그 선정', sub: 'Blog of the Month' },
   { year: '2024', event: '네이버 올해의 블로그 선정', sub: 'Blog of the Year' },
+  { year: '2025', event: 'GTQ 1급 · 검색광고마케터 1급 · AI-PDTQ 취득', sub: 'Certifications' },
   { year: '2026', event: '김포시농구협회 홈페이지 프로젝트 진행', sub: 'Web Project' },
 ];
 

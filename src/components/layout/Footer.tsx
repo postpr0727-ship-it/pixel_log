@@ -104,10 +104,22 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Contact CTA strip */}
+        <div className="py-6 border-t border-white/10 text-center">
+          <p className="text-white/40 text-xs font-bold tracking-widest uppercase mb-3">CONTACT</p>
+          <a
+            href="mailto:postpr0727@gmail.com"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-white/50 text-sm font-black transition-all"
+          >
+            <Mail className="h-4 w-4" />
+            postpr0727@gmail.com
+          </a>
+        </div>
+
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm font-medium">
-            © 2026 PIXEL-LOG. All rights reserved.
+            © 2026 김경훈 · PIXEL-LOG. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-white/40 hover:text-white text-sm transition-colors font-medium">
