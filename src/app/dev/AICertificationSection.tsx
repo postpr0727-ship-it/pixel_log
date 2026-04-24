@@ -40,7 +40,7 @@ export function AICertificationSection() {
 
                         <div className="p-8 lg:p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
                             <p className="text-white/90 text-lg leading-relaxed mb-8 font-medium">
-                                픽셀로그는 한국인공지능협회에서 인증하는 <strong>AI-PDTQ (AI-aided Product Design Technology Qualification)</strong> 자격증을 취득하여 생성형 AI를 실무에 완벽하게 적용하고 있습니다.
+                                저는 한국인공지능협회에서 인증하는 <strong>AI-PDTQ (AI-aided Product Design Technology Qualification)</strong> 자격증을 직접 취득하여 생성형 AI를 실무에 적용하고 있습니다.
                             </p>
 
                             <ul className="space-y-5">
