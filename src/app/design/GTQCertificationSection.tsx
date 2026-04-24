@@ -40,12 +40,12 @@ export function GTQCertificationSection() {
 
                         <div className="p-8 lg:p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
                             <p className="text-white/90 text-lg leading-relaxed mb-8 font-medium">
-                                픽셀로그는 <strong>한국생산성본부(KPC)에서 주관하는 GTQ (Graphic Technology Qualification) 1급 자격증</strong>을 보유한 검증된 전문가 그룹입니다.
+                                저는 <strong>한국생산성본부(KPC)에서 주관하는 GTQ (Graphic Technology Qualification) 1급 자격증</strong>을 직접 취득한 그래픽 전문가입니다.
                             </p>
 
                             <ul className="space-y-5">
                                 {[
-                                    '국가공인 그래픽 기술자격 최고 등급 취득 (GTQ 1급)',
+                                    '국가공인 그래픽 기술자격 최고 등급 개인 취득 (GTQ 1급)',
                                     '포토샵, 일러스트레이터 등 표준 디자인 툴 완벽 마스터',
                                     '고도의 이미지 합성, 수정 및 고급 레이아웃 구성 능력 검증',
                                     '정확하고 신속한 실무 맞춤형 디자인 결과물 도출'
