@@ -9,16 +9,20 @@ export function MainHero() {
       {/* Hero Image Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.png"
+          src="/images/hero_casual.png"
           alt="Pixellog Hero"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[center_top] md:object-[right_top]"
           quality={90}
         />
-        {/* Premium Gradient Overlay instead of Blur */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-navy/20 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-transparent to-navy/80" />
+        {/* Right-side vignette (About page style) — keeps person visible on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
+        {/* Bottom vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent" />
+
+        {/* Gold top accent line (About page style) */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold via-gold/60 to-transparent z-10" />
       </div>
 
       {/* Grid Pattern Background */}
