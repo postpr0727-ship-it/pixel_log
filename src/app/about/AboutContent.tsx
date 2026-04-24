@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Target, Lightbulb, Users, Zap, Mail, MessageCircle } from 'lucide-react';
+import { Target, Lightbulb, Users, Zap, Mail } from 'lucide-react';
 
 const values = [
   {
@@ -96,15 +96,6 @@ export function AboutContent() {
               >
                 <Mail className="w-4 h-4" />
                 postpr0727@gmail.com
-              </a>
-              <a
-                href="https://pf.kakao.com/_pixellog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#FEE500] text-[#3A1D1D] text-sm font-black hover:opacity-80 transition-opacity"
-              >
-                <MessageCircle className="w-4 h-4" />
-                카카오톡 @pixellog
               </a>
             </div>
           </div>
