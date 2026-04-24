@@ -39,17 +39,6 @@ export function Footer() {
               크리에이터 김경훈의 포트폴리오입니다.
             </p>
 
-            <div className="flex items-center gap-4">
-              <a
-                href="https://blog.naver.com/curator-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="네이버 블로그"
-              >
-                <span className="text-white text-sm font-black">N</span>
-              </a>
-            </div>
           </div>
 
           {/* Services Column */}
