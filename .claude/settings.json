@@ -15,7 +15,8 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(curl -s \"http://localhost:3003/api/portfolio-pdf\" -o /tmp/test.pdf -w \"HTTP:%{http_code} SIZE:%{size_download}\")",
       "Bash(curl -s \"http://localhost:3002/api/portfolio-pdf\" -o /tmp/test.pdf -w \"HTTP:%{http_code} SIZE:%{size_download}\")",
-      "Bash(curl -s \"http://localhost:3003/api/portfolio-pdf\" -o /tmp/test2.pdf -w \"HTTP:%{http_code} SIZE:%{size_download}\")"
+      "Bash(curl -s \"http://localhost:3003/api/portfolio-pdf\" -o /tmp/test2.pdf -w \"HTTP:%{http_code} SIZE:%{size_download}\")",
+      "Bash(node scripts/generate-shortcut-pdf.js)"
     ]
   }
 }

@@ -8,22 +8,22 @@ const values = [
   {
     icon: Target,
     title: '목표 지향',
-    description: '클라이언트의 비즈니스 목표를 명확히 이해하고, 그 목표 달성을 위한 최적의 솔루션을 제공합니다.',
+    description: '작업의 목적을 먼저 이해합니다. 보기 좋은 것보다 효과 있는 것을 만드는 데 집중합니다.',
   },
   {
     icon: Lightbulb,
-    title: '창의적 접근',
-    description: '트렌드를 읽고 창의적인 아이디어로 브랜드의 차별화된 가치를 만들어냅니다.',
+    title: '멀티 스킬',
+    description: '디자인, 개발, 광고, 영상을 혼자 소화합니다. 기획부터 완성까지 일관된 시각으로 작업합니다.',
   },
   {
     icon: Users,
-    title: '파트너십',
-    description: '단순한 외주가 아닌, 함께 성장하는 비즈니스 파트너로서 긴밀히 협력합니다.',
+    title: '실무 중심',
+    description: '실제 클라이언트 프로젝트를 통해 쌓은 경험을 바탕으로 현실적인 결과물을 만들어냅니다.',
   },
   {
     icon: Zap,
     title: '빠른 실행력',
-    description: '효율적인 프로세스로 빠르게 결과물을 도출하고, 지속적인 피드백을 반영합니다.',
+    description: '아이디어를 빠르게 구현합니다. 완벽보다 실행을 우선하고, 피드백으로 완성해 나갑니다.',
   },
 ];
 
@@ -43,26 +43,26 @@ export function AboutContent() {
         >
           <div>
             <span className="text-navy/60 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
-              OUR STORY
+              ABOUT ME
             </span>
             <h2 className="section-title text-navy mt-2 mb-8 font-black italic tracking-tighter uppercase leading-none">
-              PIXEL-LOG,
+              김경훈,
               <br />
               픽셀로 기록하다
             </h2>
             <div className="space-y-6 text-navy/70 leading-relaxed font-bold italic text-lg">
               <p>
                 PIXEL-LOG는 &ldquo;픽셀(Pixel)&rdquo;과 &ldquo;기록(Log)&rdquo;의 합성어입니다.<br className="hidden lg:block" />
-                디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아,<br className="hidden lg:block" />
-                클라이언트의 비즈니스 스토리를 기록합니다.
+                디지털 세상의 가장 작은 단위인 픽셀 하나하나에 정성을 담아<br className="hidden lg:block" />
+                작업 하나하나를 기록해온 개인 포트폴리오입니다.
               </p>
               <p>
-                브랜드 아이덴티티 구축부터 웹 개발, 콘텐츠 마케팅, 영상 제작까지
-                비즈니스 성장에 필요한 모든 크리에이티브 솔루션을 제공합니다.
+                브랜드 디자인부터 웹 개발, 온라인 광고, 블로그 마케팅, 영상 제작까지
+                다양한 분야의 실무 경험을 쌓아왔습니다.
               </p>
               <p>
-                우리는 단순히 결과물을 만드는 것이 아니라,
-                클라이언트의 비즈니스가 성장하는 과정을 함께 합니다.
+                한 사람이 기획, 디자인, 개발, 마케팅을 모두 다룰 수 있다는 것,
+                그것이 제 가장 큰 강점입니다.
               </p>
             </div>
           </div>
@@ -90,10 +90,10 @@ export function AboutContent() {
           className="text-center mb-16 lg:mb-24"
         >
           <span className="text-navy/60 text-sm font-black tracking-[0.3em] uppercase mb-4 block">
-            OUR VALUES
+            MY VALUES
           </span>
           <h2 className="section-title text-navy mt-2 font-black italic tracking-tighter uppercase">
-            PIXEL-LOG가 추구하는 가치
+            제가 일하는 방식
           </h2>
         </motion.div>
 

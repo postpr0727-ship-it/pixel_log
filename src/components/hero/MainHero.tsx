@@ -48,7 +48,7 @@ export function MainHero() {
             >
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold text-xs font-black tracking-widest uppercase">
-                PIXEL-LOG · Creative Label
+                김경훈 · Personal Portfolio
               </span>
             </motion.div>
 
@@ -60,9 +60,9 @@ export function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              We Make Your Brand
+              안녕하세요,
               <br />
-              <span className="italic text-gold">Impossible to Ignore.</span>
+              <span className="italic text-gold">김경훈입니다.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -73,10 +73,10 @@ export function MainHero() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <span className="block text-white font-black text-lg md:text-2xl tracking-tight mb-3">
-                브랜드를 완성하는<br className="block md:hidden" /> 크리에이티브 레이블, <span className="text-gold">픽셀로그</span>.
+                디자인 · 개발 · 광고 · 영상을<br className="block md:hidden" /> 다루는 <span className="text-gold">크리에이터</span>.
               </span>
-              브랜드가 단순히 보이는 것을 넘어 <span className="text-gold font-black">기억되고 선택받을</span> 수 있도록 —<br className="hidden md:block" />{' '}
-              <span className="text-gold font-black">디자인, 개발, 마케팅, 영상</span>의 모든 접점을 정교하게 설계합니다.
+              브랜드 디자인부터 웹 개발, 온라인 광고, 영상 제작까지 —<br className="hidden md:block" />{' '}
+              <span className="text-gold font-black">픽셀 하나까지 완벽하게</span> 만들어온 작업물들을 소개합니다.
             </motion.p>
 
           </motion.div>

@@ -356,8 +356,8 @@ function FeatureQuote() {
           className="text-white font-bold leading-snug"
           style={{ fontSize: 'clamp(1.2rem, 2.5vw, 2rem)' }}
         >
-          모든 프로젝트에서{' '}
-          <span className="text-gold">최고의 결과물</span>을 만들어냅니다.
+          한 사람이{' '}
+          <span className="text-gold">모든 것을</span> 만듭니다.
         </motion.p>
 
         <motion.p
@@ -366,8 +366,8 @@ function FeatureQuote() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-white/38 text-sm md:text-base mt-4 leading-relaxed max-w-xl"
         >
-          데이터 기반의 전략과 창의적인 실행으로 브랜드의 성장을 이끕니다.
-          수치는 거짓말하지 않습니다.
+          기획, 디자인, 개발, 광고, 영상까지 — 혼자서 처음부터 끝까지.
+          그것이 김경훈의 방식입니다.
         </motion.p>
 
         <motion.div
@@ -439,7 +439,7 @@ export function StatsSection() {
           >
             ACHIEVEMENT
           </motion.p>
-          {['수치로 보는', '픽셀로그의 성과'].map((line, i) => (
+          {['수치로 보는', '김경훈의 이력'].map((line, i) => (
             <div key={i} className="overflow-hidden">
               <motion.h2
                 initial={{ y: '110%' }}
@@ -456,15 +456,15 @@ export function StatsSection() {
 
         {/* Primary 4 stat cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5">
-          <StatCard number={150} suffix="+"   label="완료 프로젝트"     sublabel="Completed Projects" delay={0.10} dir="left" />
-          <StatCard number={98}  suffix="%"   label="고객 만족도"       sublabel="Client Satisfaction" delay={0.18} />
-          <StatCard number={300} suffix="%"   label="유입 트래픽 성장"  sublabel="Avg. Traffic Growth"  delay={0.26} />
-          <StatCard number={5}   suffix="년+" label="전문 업력"         sublabel="Years of Experience"  delay={0.34} dir="right" />
+          <StatCard number={150} suffix="+"   label="완료 프로젝트"     sublabel="Completed Projects"   delay={0.10} dir="left" />
+          <StatCard number={5}   suffix="년+" label="실무 경력"         sublabel="Years of Experience"  delay={0.18} />
+          <StatCard number={500} suffix="+"   label="제작 콘텐츠"       sublabel="Content Produced"     delay={0.26} />
+          <StatCard number={6}   suffix="개"  label="보유 역량 분야"    sublabel="Multi-Skill Areas"    delay={0.34} dir="right" />
         </div>
 
         {/* Secondary stat strip */}
         <div className="mt-3 md:mt-4 lg:mt-5 flex justify-center border border-white/[0.09] bg-white/[0.03]">
-          <MiniStat number={500} suffix="+" label="제작 콘텐츠" sublabel="Content Produced" delay={0.48} />
+          <MiniStat number={2} suffix="개" label="네이버 블로그 공식 수상" sublabel="Naver Blog Award" delay={0.48} />
         </div>
 
         {/* Timeline */}
