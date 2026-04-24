@@ -161,12 +161,12 @@ function MiniStat({ number, suffix, label, sublabel, delay, locale }: StatCardPr
 
 // ── Horizontal timeline / milestones ─────────────────────────────────────────
 const MILESTONES = [
+  { year: '2010', event: '실무 시작', sub: 'Career Start' },
   { year: '2023', event: 'PIXEL-LOG 설립', sub: 'Founded' },
-  { year: '2023', event: '김포다조은병원 통합마케팅 수주', sub: 'Marketing Contract' },
+  { year: '2023', event: '김포다조은병원 통합마케팅 프로젝트 진행', sub: 'Marketing Project' },
   { year: '2024', event: '네이버 이달의 블로그 선정', sub: 'Blog of the Month' },
   { year: '2024', event: '네이버 올해의 블로그 선정', sub: 'Blog of the Year' },
-  { year: '2025', event: 'AI 웹 프로그래밍 도입', sub: 'AI Web Programming' },
-  { year: '2026', event: '김포시농구협회 홈페이지 수주', sub: 'Official Site Contract' },
+  { year: '2026', event: '김포시농구협회 홈페이지 프로젝트 진행', sub: 'Web Project' },
 ];
 
 function Timeline() {
@@ -457,7 +457,7 @@ export function StatsSection() {
         {/* Primary 4 stat cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5">
           <StatCard number={150} suffix="+"   label="완료 프로젝트"     sublabel="Completed Projects"   delay={0.10} dir="left" />
-          <StatCard number={5}   suffix="년+" label="실무 경력"         sublabel="Years of Experience"  delay={0.18} />
+          <StatCard number={15}  suffix="년+" label="실무 경력"         sublabel="Years of Experience"  delay={0.18} />
           <StatCard number={500} suffix="+"   label="제작 콘텐츠"       sublabel="Content Produced"     delay={0.26} />
           <StatCard number={6}   suffix="개"  label="보유 역량 분야"    sublabel="Multi-Skill Areas"    delay={0.34} dir="right" />
         </div>
