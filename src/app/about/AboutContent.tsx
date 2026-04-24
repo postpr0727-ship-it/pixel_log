@@ -18,7 +18,7 @@ const values = [
   {
     icon: Users,
     title: '실무 중심',
-    description: '실제 클라이언트 프로젝트를 통해 쌓은 경험을 바탕으로 현실적인 결과물을 만들어냅니다.',
+    description: '실제 프로젝트를 통해 쌓은 실무 경험이 바탕입니다. 이론보다 현장에서 체득한 것을 더 신뢰합니다.',
   },
   {
     icon: Zap,

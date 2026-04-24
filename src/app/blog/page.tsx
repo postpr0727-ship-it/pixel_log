@@ -12,24 +12,24 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: '블로그 마케팅',
-  description: '전문적인 콘텐츠로 브랜드 인지도를 높이고 잠재 고객을 유치합니다.',
+  description: '네이버 이달의 블로그·올해의 블로그 선정. 검색 상위 노출 콘텐츠 기획과 운영 경험을 보유하고 있습니다.',
 };
 
 const philosophyItems = [
   {
     icon: 'Search',
     title: '키워드 최적화',
-    description: '타겟 고객이 검색하는 키워드를 분석하여 상위 노출되는 콘텐츠를 제작합니다.',
+    description: '사람들이 실제로 검색하는 키워드를 분석하고, 상위 노출되는 콘텐츠를 직접 기획·제작해왔습니다.',
   },
   {
     icon: 'FileText',
     title: '전문 콘텐츠 제작',
-    description: '업종에 맞는 전문적인 콘텐츠로 브랜드의 전문성과 신뢰도를 높입니다.',
+    description: '주제에 깊이 파고드는 전문 콘텐츠를 직접 쓸 수 있습니다. 단순 정보 나열이 아닌 읽히는 글을 씁니다.',
   },
   {
     icon: 'BarChart',
     title: '성과 분석 및 개선',
-    description: '콘텐츠 성과를 지속적으로 분석하고 개선하여 효과를 극대화합니다.',
+    description: '콘텐츠를 올리고 끝나지 않습니다. 데이터를 보고 개선하는 과정을 반복해왔습니다.',
   },
 ];
 
@@ -43,13 +43,13 @@ export default async function BlogMarketingPage() {
       <PageHero
         title="블로그 마케팅"
         titleEn="BLOG MARKETING"
-        description="전문적인 콘텐츠로 브랜드 인지도를 높이고 잠재 고객을 유치합니다."
+        description="네이버 이달의 블로그·올해의 블로그 선정. 블로그 마케팅 실무 경험과 작업물을 소개합니다."
         breadcrumbs={[{ label: '블로그 마케팅' }]}
       />
       <PhilosophySection
-        title="블로그 마케팅 철학"
-        subtitle="OUR APPROACH"
-        description="좋은 콘텐츠는 검색 엔진과 고객 모두에게 사랑받습니다."
+        title="블로그 마케팅에 대한 생각"
+        subtitle="MY APPROACH"
+        description="좋은 콘텐츠는 검색 엔진과 사람 모두에게 읽힙니다. 알고리즘보다 사람을 먼저 생각하고 씁니다."
         items={philosophyItems}
       />
 
@@ -120,7 +120,7 @@ export default async function BlogMarketingPage() {
                 <p className="text-base text-navy/70 leading-relaxed font-semibold italic">
                   이달의 블로그는 수백만 개의 블로그 중 <strong className="text-navy">활동성, 전문성, 영향력</strong>을
                   종합적으로 평가하여 선정되는 네이버 최고의 영예입니다.
-                  단순한 상위 노출을 넘어, 브랜드의 신뢰도를 높이는 진짜 마케팅을 약속드립니다.
+                  단순한 상위 노출을 넘어, 콘텐츠 자체의 신뢰도로 독자를 만들어온 경험을 보유하고 있습니다.
                 </p>
               </div>
 
@@ -182,12 +182,12 @@ export default async function BlogMarketingPage() {
                 <div className="bg-navy/5 backdrop-blur-sm border border-navy/10 rounded-2xl p-6 space-y-4 text-left shadow-lg">
                   <p className="text-lg text-navy/70 leading-relaxed font-semibold italic">
                     네이버가 공식 인정한 <strong className="text-navy font-black">대한민국 상위 0.0003%</strong>의 권위.<br />
-                    이달의 블로그 그 이상의 가치. 단순한 상위 노출을 넘어, 브랜드의 격을 높이는 차원이 다른 마케팅 솔루션을 경험하세요.
+                    이달의 블로그를 넘어 올해의 블로그까지. 단순 상위 노출이 아닌 콘텐츠 자체의 힘으로 인정받은 실적을 직접 확인하세요.
                   </p>
                   <ul className="space-y-2 text-sm text-navy/50 font-black tracking-tight">
                     <li className="flex items-center gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-navy/20" />
-                      <span>네이버 공식 인증 파트너 (Official Partner)</span>
+                      <span>네이버 공식 인증 블로거 (Official Certified)</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-navy/20" />

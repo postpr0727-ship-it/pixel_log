@@ -101,7 +101,7 @@ export function AdServicesSection() {
             광고 서비스 종류
           </h2>
           <p className="text-white/60 max-w-xl mx-auto font-medium leading-relaxed">
-            플랫폼별 특성과 강점을 분석하여 비즈니스 목표에 최적화된 채널을 선택해 드립니다.
+            플랫폼별 특성과 차이를 직접 경험하며 각 채널에 맞는 운영 방식을 익혀왔습니다.
           </p>
         </motion.div>
 
@@ -185,7 +185,7 @@ export function AdServicesSection() {
           transition={{ delay: 0.6 }}
           className="text-center text-white/30 text-xs font-bold tracking-wider mt-16 uppercase"
         >
-          단일 채널부터 멀티채널 통합 운영까지, 예산과 목표에 맞는 최적 조합을 제안해 드립니다
+          단일 채널부터 멀티채널 통합 운영까지 직접 경험한 광고 집행 실적을 확인해 보세요
         </motion.p>
 
       </div>

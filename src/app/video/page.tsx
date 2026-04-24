@@ -71,10 +71,10 @@ export default async function VideoPage() {
                     ※ 대본 작성, 소재 발굴 및 출연자 섭외는 제공하지 않습니다
                   </p>
                   <p className="text-lg">
-                    저희는 <strong className="text-navy font-black underline decoration-navy/30 underline-offset-4">촬영과 편집에 특화된 엔지니어링 서비스</strong>를 제공합니다.
+                    저는 <strong className="text-navy font-black underline decoration-navy/30 underline-offset-4">촬영과 편집을 직접 수행</strong>할 수 있습니다.
                   </p>
                   <p className="text-base text-navy/50">
-                    고객님께서 준비하신 기획안, 대본, 출연자를 바탕으로 전문적인 촬영과 편집 작업을 진행합니다.
+                    기획안, 대본, 출연자가 준비된 상태에서 촬영·편집을 직접 진행한 경험을 보유하고 있습니다.
                   </p>
                 </div>
               </div>

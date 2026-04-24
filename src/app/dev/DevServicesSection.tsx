@@ -9,7 +9,7 @@ const devServices = [
     category: '홈페이지 제작',
     categoryEn: 'WEBSITE DEVELOPMENT',
     accentColor: '#4A7EC7',
-    description: '비즈니스의 온라인 얼굴을 만듭니다. 모든 기기에서 최적화된 반응형 웹사이트로 첫인상부터 신뢰를 전달합니다.',
+    description: '모든 기기에서 잘 작동하는 반응형 웹사이트를 직접 설계하고 개발해왔습니다.',
     items: [
       '기업 · 개인 홈페이지 제작',
       '쇼핑몰 & 이커머스 구축',
@@ -24,7 +24,7 @@ const devServices = [
     category: '프로그램 개발',
     categoryEn: 'SOFTWARE DEVELOPMENT',
     accentColor: '#7B5EA7',
-    description: '반복 업무를 자동화하고 데이터를 체계적으로 관리합니다. 비즈니스 규모에 꼭 맞는 맞춤형 솔루션을 개발합니다.',
+    description: '반복 업무 자동화부터 데이터 관리 시스템까지 실무 요구에 맞는 프로그램을 직접 개발한 경험이 있습니다.',
     items: [
       '업무 자동화 프로그램',
       'ERP · CRM · 재고관리 시스템',
@@ -59,7 +59,7 @@ export function DevServicesSection() {
             개발 서비스 영역
           </h2>
           <p className="text-white/55 max-w-xl mx-auto font-medium leading-relaxed">
-            웹사이트 구축부터 맞춤형 소프트웨어까지 — 비즈니스 성장을 기술로 뒷받침합니다.
+            웹사이트 구축부터 맞춤형 소프트웨어까지 — 직접 개발하고 운영해온 분야입니다.
           </p>
         </motion.div>
 

@@ -18,7 +18,7 @@ const tools = [
     },
     {
         name: 'Canva Pro',
-        description: '빠른 소셜 미디어 콘텐츠 제작과 클라이언트와의 원활한 디자인 협업을 위해 활용합니다.',
+        description: '빠른 소셜 미디어 콘텐츠 제작과 시안 공유에 적극 활용하고 있습니다.',
         color: '#00C4CC',
         image: '/images/canva-logo.svg'
     }

@@ -27,7 +27,7 @@ const services = [
     number: '02',
     title: '블로그 마케팅',
     titleEn: 'MARKETING',
-    description: '네이버 공식 "이달의 블로그" 마케터가 직접 운영합니다. 검색 최적화된 콘텐츠로 잠재 고객을 자연스럽게 유입시키고, 브랜드 인지도를 높여드립니다.',
+    description: '네이버 공식 "이달의 블로그" 및 "올해의 블로그"에 선정된 블로그를 직접 운영해왔습니다. 검색 상위 노출 콘텐츠 기획과 실행 경험을 보유하고 있습니다.',
     href: '/blog',
     items: ['상위 노출', '키워드 최적화', '브랜딩', '콘텐츠 기획', '리뷰 마케팅'],
     gridClass: 'lg:col-span-3 lg:row-span-2 md:col-span-2 md:row-span-2',
@@ -83,7 +83,7 @@ const services = [
     number: '06',
     title: '브랜드 컨설팅',
     titleEn: 'CONSULTING',
-    description: '비즈니스 성장을 위한 맞춤형 전략 수립.',
+    description: '디자인·개발·광고를 아우르는 통합적 시각으로 전략을 수립할 수 있습니다.',
     href: '/about',
     items: ['시장분석', '사업전략'],
     gridClass: 'lg:col-span-2 md:col-span-2',
@@ -204,16 +204,16 @@ export function ServiceSection() {
           className="text-center mb-16 lg:mb-20"
         >
           <span className="text-gold text-sm font-medium tracking-wider uppercase">
-            OUR SERVICES
+            WHAT I DO
           </span>
           <h2 className="section-title text-navy mt-2 mb-4">
-            비즈니스 성장을 위한 <br className="md:hidden" />
+            제가 직접 해온 <br className="md:hidden" />
             <span className="relative inline-block border-none after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-4 after:bg-gold/40 after:-z-10 px-1">
-              원스톱 솔루션
+              작업 분야
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            디자인, 개발, 마케팅, 영상까지. PIXEL-LOG가 가장 잘하는 일들입니다.
+            디자인, 개발, 마케팅, 영상까지. 김경훈이 직접 경험하고 작업해온 분야들입니다.
           </p>
         </motion.div>
 

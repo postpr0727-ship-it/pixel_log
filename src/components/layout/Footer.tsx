@@ -34,9 +34,9 @@ export function Footer() {
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 font-medium italic">
-              당신의 비즈니스를 픽셀 하나까지 완벽하게.
+              디자인, 개발, 광고, 영상을 다루는
               <br />
-              디자인부터 개발, 마케팅까지 원스톱 솔루션을 제공합니다.
+              크리에이터 김경훈의 포트폴리오입니다.
             </p>
 
             <div className="flex items-center gap-4">

@@ -11,7 +11,7 @@ const services = [
     tag: 'DESIGN',
     title: '브랜딩부터\n웹까지',
     description:
-      '브랜드의 정체성을 시각적으로 표현합니다. 로고, 명함, 웹사이트 디자인, UI/UX까지 일관된 브랜드 경험을 만들어드립니다.',
+      '브랜드 정체성을 시각으로 풀어내는 작업을 해왔습니다. 로고, 명함, 웹사이트 디자인, UI/UX까지 일관된 시각 언어로 작업합니다.',
     image: '/images/222.png',
     href: '/design',
     bg: '#F7F5F0',
@@ -45,9 +45,9 @@ const services = [
   {
     number: '04',
     tag: 'DEVELOPMENT',
-    title: '모던 웹\n솔루션',
+    title: '직접 구현한\n웹 개발',
     description:
-      'Next.js, React 등 최신 기술 스택으로 구축하는 고성능 웹사이트. 빠르고 확장 가능한 풀스택 개발.',
+      'Next.js, React 등 최신 기술 스택을 직접 다룹니다. 풀스택 개발부터 배포·운영까지 경험했습니다.',
     image: '/images/service-dev-new.png',
     href: '/dev',
     bg: '#1A2840',
@@ -59,7 +59,7 @@ const services = [
     tag: 'VIDEO',
     title: '스토리를\n담은 영상',
     description:
-      '트렌디한 모션그래픽과 감성적인 영상 편집. 홍보영상, 유튜브 콘텐츠, 숏폼까지 브랜드 메시지를 영상으로 전달합니다.',
+      '홍보영상, 유튜브 콘텐츠, 숏폼까지 직접 촬영·편집한 영상 작업물을 보유하고 있습니다.',
     image: '/images/service-video-final.png',
     href: '/video',
     bg: '#F7F1EE',

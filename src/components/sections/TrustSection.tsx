@@ -160,7 +160,7 @@ export function TrustSection({ projects: projectsProp }: TrustSectionProps) {
                         </h2>
                     </div>
                     <p className="text-navy/70 max-w-md text-sm lg:text-base font-medium">
-                        다양한 산업 분야의 클라이언트와 함께한 최신 작업물입니다.
+                        다양한 분야에서 직접 진행한 실무 작업물입니다.
                     </p>
                 </motion.div>
 
