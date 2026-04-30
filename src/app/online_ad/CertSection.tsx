@@ -115,13 +115,13 @@ export function CertSection() {
                                         </div>
                                     </div>
 
-                                    {/* KAIT Logo — prominent */}
-                                    <div className="relative w-full h-20 mb-8">
+                                    {/* KAIT Logo — white bg for black text */}
+                                    <div className="bg-white rounded-2xl px-6 py-5 mb-8 relative w-full h-28">
                                         <Image
                                             src="/images/kait-logo-color.png"
                                             alt="KAIT 한국정보통신진흥협회"
                                             fill
-                                            className="object-contain object-left"
+                                            className="object-contain object-left p-5"
                                         />
                                     </div>
 
